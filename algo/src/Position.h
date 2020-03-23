@@ -6,10 +6,11 @@
 #define SRC_POSITION_H
 
 #include "motor.h"
-#define W 0.135
-#define D 0.065
+#include "cmath"
+#define W 0.135f
+#define D 0.065f
 #define TICK 20
-#define PERTICK 0.10205
+#define PERTICK 0.010205f
 
 struct vec
 {
@@ -21,13 +22,24 @@ class Position {
 public:
     ros::Subscriber subR;
     ros::Subscriber subL;
-    vec             pos;
+    ros::Subscriber subC;
+    ros::Publisher  pubAr;
+    ros::Publisher  pubpos;
+    ros::Publisher  pubdir;
+
+    vec             pos = {0.f, 0.f};
+    vec             dir = {0.f, 0.f};
     vec             wheelR;
     vec             wheelL;
-    float MinPowerToStart = 0;
 
-    explicit Position(ros::NodeHandle *n);
-    void SetMinPower();
+    bool inited = false;
+
+
+    explicit Position (ros::NodeHandle *n);
+   // void SetMinPower ();
+    void Rwheel (const algo::Encoder_msg::ConstPtr& msg);
+    void Lwheel (const algo::Encoder_msg::ConstPtr& msg);
+    void Compas (const std_msgs::Float64::ConstPtr& msg);
 };
 
 

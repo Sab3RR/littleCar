@@ -53,6 +53,7 @@ find_package(catkin REQUIRED COMPONENTS
  add_message_files(
    FILES
    Encoder_msg.msg
+         vector_msg.msg
  )
 
 ## Generate services in the 'srv' folder
@@ -215,5 +216,7 @@ target_link_libraries(client ${catkin_LIBRARIES})
 
 add_executable(compas src/compas.cpp src/compas.h)
 target_link_libraries(compas ${catkin_LIBRARIES})
+add_executable(position src/Position.cpp src/Position.h)
+target_link_libraries(position ${catkin_LIBRARIES})
 add_executable(motor src/motor.cpp src/MotorController.cpp src/MotorController.h src/Encoders.cpp src/Encoders.h )
 target_link_libraries(motor ${catkin_LIBRARIES})

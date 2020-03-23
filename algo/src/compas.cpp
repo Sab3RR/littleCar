@@ -23,7 +23,7 @@ void compas::toFloat(const std_msgs::String::ConstPtr& msg)
 int main(int ac, char** av)
 {
     compas *Compas;
-    ros::init(ac, av, "motor");
+    ros::init(ac, av, "compas");
     ros::NodeHandle n;
     Compas = new compas(&n);
     ros::spin();
