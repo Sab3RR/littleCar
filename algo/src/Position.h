@@ -12,11 +12,6 @@
 #define TICK 20
 #define PERTICK 0.010205f
 
-struct vec
-{
-    float x;
-    float y;
-};
 
 class Position {
 public:
