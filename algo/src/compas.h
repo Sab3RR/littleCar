@@ -17,6 +17,7 @@ public:
     ros::Subscriber subC;
     ros::Publisher pubC;
 
+    float calibrated = -1;
     explicit compas(ros::NodeHandle *n);
     void toFloat(const std_msgs::String::ConstPtr& msg);
 };
