@@ -55,7 +55,7 @@ void ComandReceiver::Setdir(const algo::vector_msg::ConstPtr &msg)
         }
     }
     else
-        max_speed = 1 / 2.;
+        max_speed = 0.23f;
     angle = (dir.x * dist.x + dir.y * dist.y) / (sqrtf(dir.x * dir.x + dir.y * dir.y) * sqrtf(dist.x * dist.x + dist.y * dist.y));
     div = dir.x * dist.y - dist.x * dir.y;
     if (div < 0)
