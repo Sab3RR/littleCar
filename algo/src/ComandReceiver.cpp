@@ -46,7 +46,7 @@ void ComandReceiver::Setdir(const algo::vector_msg::ConstPtr &msg)
     distance = sqrtf(pow(dest.x - pos.x, 2) + pow(dest.y - pos.y, 2));
     if (distance < 10)
     {
-        if (distance / 2. > 1)
+        if (distance / 2. > 10)
         {
             max_speed = distance / 2.;
         } else
