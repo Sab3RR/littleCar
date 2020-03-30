@@ -44,7 +44,7 @@ void ComandReceiver::Setdir(const algo::vector_msg::ConstPtr &msg)
     dist.x = dest.x - pos.x;
     dist.y = dest.y - pos.y;
     distance = sqrtf(pow(dest.x - pos.x, 2) + pow(dest.y - pos.y, 2));
-    if (distance < 1)
+    if (distance < 10)
     {
         if (distance / 2. > 1)
         {
