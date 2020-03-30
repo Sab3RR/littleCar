@@ -51,7 +51,7 @@ void ComandReceiver::Setdir(const algo::vector_msg::ConstPtr &msg)
             max_speed = distance / 2.;
         } else
         {
-            max_speed = 0.3f;
+            max_speed = 0.23f;
         }
     }
     else
