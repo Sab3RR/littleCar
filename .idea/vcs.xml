@@ -2,5 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/razor_imu_9dof" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/razor_imu_m0_driver" vcs="Git" />
   </component>
 </project>

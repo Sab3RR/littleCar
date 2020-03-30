@@ -46,12 +46,12 @@ void ComandReceiver::Setdir(const algo::vector_msg::ConstPtr &msg)
     distance = sqrtf(pow(dest.x - pos.x, 2) + pow(dest.y - pos.y, 2));
     if (distance < 1)
     {
-        if (distance / 2. > 0.25)
+        if (distance / 2. > 1)
         {
             max_speed = distance / 2.;
         } else
         {
-            max_speed = 0.25f;
+            max_speed = 0.3f;
         }
     }
     else
@@ -60,15 +60,15 @@ void ComandReceiver::Setdir(const algo::vector_msg::ConstPtr &msg)
     div = dir.x * dist.y - dist.x * dir.y;
     if (div < 0)
     {
-        Ar.data[1] = max_speed;
-        if (angle > 0.5)
-            Ar.data[0] = max_speed * angle;
+        Ar.data[0] = max_speed;
+        if (angle > 0.99)
+            Ar.data[1] = max_speed * angle;
         pubAr.publish(Ar);
     } else
     {
-        Ar.data[0] = max_speed;
-        if (angle > 0)
-            Ar.data[1] = max_speed * angle;
+        Ar.data[1] = max_speed;
+        if (angle > 0.99)
+            Ar.data[0] = max_speed * angle;
         pubAr.publish(Ar);
     }
 

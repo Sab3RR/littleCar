@@ -31,8 +31,42 @@ PointArray::PointArray(ros::NodeHandle *n)
     point.x = 1;
     point.y = 0;
     points.push_back(point);
+    point.y = -0.25;
+    points.push_back(point);
     point.x = 0;
     points.push_back(point);
+    point.y = -0.5;
+    points.push_back(point);
+    point.x = 1;
+    points.push_back(point);
+    point.y = -0.75;
+    points.push_back(point);
+    point.x = 0;
+    points.push_back(point);
+    point.y = -1;
+    points.push_back(point);
+    point.x = 1;
+    points.push_back(point);
+    point.y = -1.25;
+    points.push_back(point);
+    point.x = 0;
+    points.push_back(point);
+    point.y = -1.5;
+    points.push_back(point);
+    point.x = 1;
+    points.push_back(point);
+    point.y = -1.75;
+    points.push_back(point);
+    point.x = 0;
+    points.push_back(point);
+    point.y = -2;
+    points.push_back(point);
+    point.x = 1;
+    points.push_back(point);
+    point.x = 0;
+    point.y = 0;
+    points.push_back(point);
+
 }
 
 int main(int ac, char** av)

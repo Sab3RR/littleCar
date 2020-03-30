@@ -15,22 +15,33 @@ void compas::toFloat(const std_msgs::String::ConstPtr& msg)
     std::vector<std::string> arr;
     std_msgs::Float64 new_msg;
 
-    boost::split(arr, msg->data, boost::is_any_of(" "));
-    new_msg.data = std::atof(arr[2].c_str());
-    if (calibrated == -1)
-    {
-        calibrated = new_msg.data;
-    }
-    new_msg.data = new_msg.data - calibrated;
-    /*if (new_msg.data < 0)
-    {
-        new_msg.data *= -1;
-    } else if (new_msg.data > 0)
-    {
-        new_msg.data =
-    }*/
-    pubC.publish(new_msg);
+     boost::split(arr, msg->data, boost::is_any_of(","));
+     new_msg.data = std::atof(&(arr[0].c_str())[5]);
+     if (calibrated == -1)
+     {
+         calibrated = new_msg.data;
+     }
+     new_msg.data = new_msg.data - calibrated;
+
+     pubC.publish(new_msg);
 }
+   /* static tf2_ros::TransformBroadcaster br;
+    tf2::Quaternion quat_tf;
+    geometry_msgs::TransformStamped quat_msg;
+
+    quat_msg.header.stamp = ros::Time::now();
+    quat_msg.header.frame_id = "world";
+    quat_msg.child_frame_id = "compas";
+    quat_msg.transform.translation.x = 0;
+    quat_msg.transform.translation.y = 0;
+    quat_msg.transform.translation.z = 0;
+    quat_msg.transform.rotation.x = msg->orientation.x;
+    quat_msg.transform.rotation.y = msg->orientation.y;
+    quat_msg.transform.rotation.z = msg->orientation.z;
+    quat_msg.transform.rotation.w = msg->orientation.w;
+    br.sendTransform(quat_msg);*/
+
+//}
 
 int main(int ac, char** av)
 {
