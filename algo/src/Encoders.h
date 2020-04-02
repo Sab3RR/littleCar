@@ -4,7 +4,7 @@
 
 #ifndef SRC_ENCODERS_H
 #define SRC_ENCODERS_H
-#include "motor.h"
+#include "rosdef.h"
 #include <functional>
 #include <ctime>
 

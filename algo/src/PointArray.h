@@ -5,7 +5,7 @@
 #ifndef SRC_POINTARRAY_H
 #define SRC_POINTARRAY_H
 
-#include "motor.h"
+#include "rosdef.h"
 #include <cmath>
 
 class PointArray {

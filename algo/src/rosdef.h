@@ -2,8 +2,8 @@
 // Created by sab3r on 20.03.20.
 //
 
-#ifndef SRC_MOTOR_H
-#define SRC_MOTOR_H
+#ifndef SRC_ROSDEF_H
+#define SRC_ROSDEF_H
 #include <ros/ros.h>
 #include <std_msgs/String.h>
 #include <std_msgs/Float64.h>
@@ -14,6 +14,8 @@
 #include <sensor_msgs/Imu.h>
 //#include <tf2_geometry_msgs/tf2_geometry_msgs.h>
 //#include <tf2_ros/transform_broadcaster.h>
+#include <geometry_msgs/Pose.h>
+#include <geometry_msgs/PoseArray.h>
 #include <sensor_msgs/MagneticField.h>
 #include <geometry_msgs/TransformStamped.h>
 #include "algo/Encoder_msg.h"
@@ -25,4 +27,4 @@ struct vec
     float x;
     float y;
 };
-#endif //SRC_MOTOR_H
+#endif //SRC_ROSDEF_H

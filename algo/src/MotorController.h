@@ -4,7 +4,7 @@
 
 #ifndef SRC_MOTORCONTROLLER_H
 #define SRC_MOTORCONTROLLER_H
-#include "motor.h"
+#include "rosdef.h"
 #include <cmath>
 
 class MotorController {

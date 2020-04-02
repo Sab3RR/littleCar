@@ -5,7 +5,7 @@
 #ifndef SRC_POSITION_H
 #define SRC_POSITION_H
 
-#include "motor.h"
+#include "rosdef.h"
 #include "cmath"
 #define W 0.135f
 #define D 0.065f

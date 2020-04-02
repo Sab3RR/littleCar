@@ -5,7 +5,7 @@
 #ifndef SRC_COMPAS_H
 #define SRC_COMPAS_H
 
-#include "motor.h"
+#include "rosdef.h"
 #include <string>
 #include <iostream>
 #include <vector>

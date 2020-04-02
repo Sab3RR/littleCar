@@ -5,7 +5,7 @@
 #ifndef SRC_COMANDRECEIVER_H
 #define SRC_COMANDRECEIVER_H
 
-#include "motor.h"
+#include "rosdef.h"
 #include <cmath>
 class ComandReceiver {
 public:
