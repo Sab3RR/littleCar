@@ -17,7 +17,10 @@
 #include <geometry_msgs/Pose.h>
 #include <geometry_msgs/PoseArray.h>
 #include <sensor_msgs/MagneticField.h>
+#include <sensor_msgs/LaserScan.h>
 #include <geometry_msgs/TransformStamped.h>
+#include <visualization_msgs/Marker.h>
+#include <visualization_msgs/MarkerArray.h>
 #include "algo/Encoder_msg.h"
 #include "algo/vector_msg.h"
 

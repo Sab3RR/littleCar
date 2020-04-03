@@ -7,19 +7,22 @@
 
 #include "rosdef.h"
 #include <list>
+#include <cmath>
 
 class ObjectsFromLaser {
 public:
     ros::Subscriber subL;
     ros::Subscriber subpos;
     ros::Subscriber subdir;
-    ros::Publisher<geometry_msgs::PoseArray>  pubpoints;
+    ros::Publisher pubpoints;
+    ros::Publisher vis_pub;
 
     vec pos = {0.f,0.f};
-    vec dir = {1.f, 0.f};
-    std::list<vec> points;
+    float dir = 0;
+    std::list<geometry_msgs::Pose> points;
 
-    explicit ObjectsFromLaser(ros::NodeHandle &n);
+    explicit ObjectsFromLaser(ros::NodeHandle *n);
+    void    AddObjects(const sensor_msgs::LaserScan::ConstPtr &msg);
 
 };
 
