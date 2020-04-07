@@ -10,11 +10,29 @@ ObjectsFromLaser::ObjectsFromLaser(ros::NodeHandle *n)
     vis_pub = n->advertise<visualization_msgs::MarkerArray>( "visualization_marker", 0 );
 }
 
+bool ObjectsFromLaser::hit(geometry_msgs::Pose &point, geometry_msgs::Pose points) {
+    float range;
+
+    range = sqrtf(pow(point.position.x - points.position.x, 2) + pow(point.position.y - points.position.y, 2));
+    if (points.position.z > range)
+    {
+
+        return true;
+    } else if (point.position.z > range)
+    {
+      point.position.z = range;
+    }
+    return false;
+}
+
 void    ObjectsFromLaser::AddObjects(const sensor_msgs::LaserScan::ConstPtr &msg)
 {
     geometry_msgs::Pose point;
+    geometry_msgs::Pose currentPoint;
+    std::list<geometry_msgs::Pose>::iterator p;
     visualization_msgs::MarkerArray markerArray;
     float angle;
+    float dist;
     float range;
     bool  add;
     int i;
@@ -25,23 +43,50 @@ void    ObjectsFromLaser::AddObjects(const sensor_msgs::LaserScan::ConstPtr &msg
             continue;
         add = true;
         angle = msg->angle_min + dir + i * msg->angle_increment;
-        point.position.x = cos(angle) * msg->ranges[i];
-        point.position.y = sin(angle) * msg->ranges[i];
+        point.position.x = cos(angle) * msg->ranges[i] + pos.x;
+        point.position.y = sin(angle) * msg->ranges[i] + pos.y;
         point.position.z = 0.25;
-        for (auto & j : points)
+        point.orientation.w = 0;
+        p = points.begin();
+        while (p != points.end())
         {
-            range = sqrtf(pow(point.position.x - j.position.x, 2) + pow(point.position.y - j.position.y, 2));
-            if (j.position.z > range)
+            if (add && hit(point, *p))
             {
-               add = false;
-               break;
-            } else if (point.position.z > range)
-            {
-                point.position.z = range;
+                add = false;
+                p++;
+                continue;
+            }
+            else {
+                dist = sqrtf(pow(p->position.x,2) + pow(p->position.y, 2));
+                angle = (point.position.x * p->position.x + point.position.y * p->position.y) / (sqrtf(pow(point.position.x, 2) + pow(point.position.y, 2)) * dist);
+                if (angle < 0)
+                {
+                    p++;
+                    continue;
+                }
+                if (angle != 0)
+                {
+                    if ((dist / angle) > sqrtf(pow(point.position.x, 2) + pow(point.position.y, 2)))
+                    {
+                        p++;
+                        continue;
+                    }
+                }
+                range = sqrtf((1/pow(angle,2)) - 1) * dist;
+                if (range < tan(msg->angle_increment) * dist)
+                {
+                    p = points.erase(p);
+                    continue;
+                }
+                else if (range < p->position.z)
+                    p->position.z = range;
+                p++;
             }
         }
         if (add)
+        {
             points.push_back(point);
+        }
     }
     i = 0;
     for (auto & j : points)
@@ -55,7 +100,7 @@ void    ObjectsFromLaser::AddObjects(const sensor_msgs::LaserScan::ConstPtr &msg
         marker.action = visualization_msgs::Marker::ADD;
         marker.pose.position.x = j.position.x;
         marker.pose.position.y = j.position.y;
-        marker.pose.position.z = 1;
+        marker.pose.position.z = 0.25;
         marker.pose.orientation.x = 0.0;
         marker.pose.orientation.y = 0.0;
         marker.pose.orientation.z = 0.0;
@@ -67,6 +112,7 @@ void    ObjectsFromLaser::AddObjects(const sensor_msgs::LaserScan::ConstPtr &msg
         marker.color.r = 0.0;
         marker.color.g = 1.0;
         marker.color.b = 0.0;
+        marker.lifetime.fromSec(0.25);
         markerArray.markers.push_back(marker);
         i++;
     }
