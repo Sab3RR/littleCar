@@ -30,4 +30,11 @@ struct vec
     float x;
     float y;
 };
+
+struct wall
+{
+    vec start;
+    vec end;
+    vec dir;
+};
 #endif //SRC_ROSDEF_H

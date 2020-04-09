@@ -25,6 +25,7 @@ bool ObjectsFromLaser::hit(geometry_msgs::Pose &point, geometry_msgs::Pose point
     return false;
 }
 
+
 void    ObjectsFromLaser::AddObjects(const sensor_msgs::LaserScan::ConstPtr &msg)
 {
     geometry_msgs::Pose point;
@@ -36,7 +37,7 @@ void    ObjectsFromLaser::AddObjects(const sensor_msgs::LaserScan::ConstPtr &msg
     float range;
     bool  add;
     int i;
-
+    addwall(msg);
     for(i = 0; msg->ranges.size() > i; i++)
     {
         if (msg->ranges[i] == INFINITY)
@@ -64,15 +65,15 @@ void    ObjectsFromLaser::AddObjects(const sensor_msgs::LaserScan::ConstPtr &msg
                     p++;
                     continue;
                 }
+                range = sqrtf((1/pow(angle,2)) - 1) * dist;
                 if (angle != 0)
                 {
-                    if ((dist / angle) > sqrtf(pow(point.position.x, 2) + pow(point.position.y, 2)))
+                    if ((dist / angle + sqrtf(pow(p->position.z, 2) - pow(range, 2))) > sqrtf(pow(point.position.x, 2) + pow(point.position.y, 2)))
                     {
                         p++;
                         continue;
                     }
                 }
-                range = sqrtf((1/pow(angle,2)) - 1) * dist;
                 if (range < tan(msg->angle_increment) * dist)
                 {
                     p = points.erase(p);
@@ -100,7 +101,7 @@ void    ObjectsFromLaser::AddObjects(const sensor_msgs::LaserScan::ConstPtr &msg
         marker.action = visualization_msgs::Marker::ADD;
         marker.pose.position.x = j.position.x;
         marker.pose.position.y = j.position.y;
-        marker.pose.position.z = 0.25;
+        marker.pose.position.z = 0;
         marker.pose.orientation.x = 0.0;
         marker.pose.orientation.y = 0.0;
         marker.pose.orientation.z = 0.0;

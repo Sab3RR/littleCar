@@ -9,6 +9,7 @@
 #include <list>
 #include <cmath>
 
+
 class ObjectsFromLaser {
 public:
     ros::Subscriber subL;
@@ -24,7 +25,7 @@ public:
     explicit ObjectsFromLaser(ros::NodeHandle *n);
     void    AddObjects(const sensor_msgs::LaserScan::ConstPtr &msg);
     bool    hit(geometry_msgs::Pose &point, geometry_msgs::Pose points);
-    void    ErasePoints();
+    void    addwall(const sensor_msgs::LaserScan::ConstPtr &msg);
 
 };
 
