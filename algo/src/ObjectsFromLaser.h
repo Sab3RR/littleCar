@@ -21,11 +21,12 @@ public:
     vec pos = {0.f,0.f};
     float dir = 0;
     std::list<geometry_msgs::Pose> points;
+    std::list<Wall> walls;
 
     explicit ObjectsFromLaser(ros::NodeHandle *n);
     void    AddObjects(const sensor_msgs::LaserScan::ConstPtr &msg);
     bool    hit(geometry_msgs::Pose &point, geometry_msgs::Pose points);
-    void    addwall(const sensor_msgs::LaserScan::ConstPtr &msg);
+    void    AddWall(const sensor_msgs::LaserScan::ConstPtr &msg);
 
 };
 

@@ -31,7 +31,7 @@ struct vec
     float y;
 };
 
-struct wall
+struct Wall
 {
     vec start;
     vec end;

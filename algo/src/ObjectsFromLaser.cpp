@@ -25,6 +25,47 @@ bool ObjectsFromLaser::hit(geometry_msgs::Pose &point, geometry_msgs::Pose point
     return false;
 }
 
+void    ObjectsFromLaser::AddWall(const sensor_msgs::LaserScan::ConstPtr &msg)
+{
+    int i = 0;
+    int start = 0;
+    int end = 0;
+    float range;
+    vec dir;
+    Wall wall;
+
+
+    while (msg->ranges.size() > start && msg->ranges.size() > end)
+    {
+        if (start == end && end + 1 < msg->ranges.size())
+        {
+            if (checkRange())
+            {
+                start++;
+                end++;
+            } else
+            {
+                dir = setDirection();
+                end++;
+            }
+
+        } else if (end + 1 < msg->ranges.size())
+        {
+            if (checkRange(msg->ranges[end], msg->ranges[end + 1]) && checkDirection(dir, msg->ranges[end], msg->ranges[end + 1]))
+            {
+                MakeWall(msg, start, end);
+                start = end;
+            } else
+            {
+                end++;
+            }
+        } else
+        {
+
+        }
+
+    }
+}
 
 void    ObjectsFromLaser::AddObjects(const sensor_msgs::LaserScan::ConstPtr &msg)
 {
@@ -37,7 +78,7 @@ void    ObjectsFromLaser::AddObjects(const sensor_msgs::LaserScan::ConstPtr &msg
     float range;
     bool  add;
     int i;
-    addwall(msg);
+    AddWall(msg);
     for(i = 0; msg->ranges.size() > i; i++)
     {
         if (msg->ranges[i] == INFINITY)
