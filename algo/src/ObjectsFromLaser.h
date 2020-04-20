@@ -8,6 +8,9 @@
 #include "rosdef.h"
 #include <list>
 #include <cmath>
+#include <vector>
+
+#define RANGE 0.1
 
 
 class ObjectsFromLaser {
@@ -27,6 +30,10 @@ public:
     void    AddObjects(const sensor_msgs::LaserScan::ConstPtr &msg);
     bool    hit(geometry_msgs::Pose &point, geometry_msgs::Pose points);
     void    AddWall(const sensor_msgs::LaserScan::ConstPtr &msg);
+    bool    checkRange(const sensor_msgs::LaserScan::ConstPtr &msg, int istart, int iend);
+    void     setDirection(const sensor_msgs::LaserScan::ConstPtr &msg, int istart, int iend, vector<double> &vdir);
+    bool    checkDirection(const sensor_msgs::LaserScan::ConstPtr &msg, vector<double> &vdir, int istart, int iend);
+    bool    checkObjectsIntersection(const sensor_msgs::LaserScan::ConstPtr &msg, int istart, int iend);
 
 };
 

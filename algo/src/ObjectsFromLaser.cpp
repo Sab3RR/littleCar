@@ -4,6 +4,8 @@
 
 #include "ObjectsFromLaser.h"
 
+
+
 ObjectsFromLaser::ObjectsFromLaser(ros::NodeHandle *n)
 {
     subL = n->subscribe("scan", 1, &ObjectsFromLaser::AddObjects, this);
@@ -25,33 +27,119 @@ bool ObjectsFromLaser::hit(geometry_msgs::Pose &point, geometry_msgs::Pose point
     return false;
 }
 
+bool ObjectsFromLaser::checkRange(const sensor_msgs::LaserScan::ConstPtr &msg, int istart, int iend)
+{
+    vector<double> start(2);
+    vector<double> end(2);
+    float angle;
+
+    if (msg->ranges[istart] == INFINITY || msg->ranges[iend] == INFINITY)
+        return true;
+    angle = msg->angle_min + dir + (float)istart * msg->angle_increment;
+    start[0] = cos(angle) * msg->ranges[istart] + pos.x;
+    start[1] = sin(angle) * msg->ranges[istart] + pos.y;
+    angle = msg->angle_min + dir + (float)iend * msg->angle_increment;
+    end[0] = cos(angle) * msg->ranges[iend] + pos.x;
+    end[1] = sin(angle) * msg->ranges[iend] + pos.y;
+
+    return LENGTH(end - start) > RANGE;
+
+}
+
+void    ObjectsFromLaser::setDirection(const sensor_msgs::LaserScan::ConstPtr &msg, int istart, int iend, vector<double> &vdir)
+{
+    vector<double> start(2);
+    vector<double> end(2);
+    float angle;
+    float range;
+
+    angle = msg->angle_min + dir + (float)istart * msg->angle_increment;
+    start[0] = cos(angle) * msg->ranges[istart] + pos.x;
+    start[1] = sin(angle) * msg->ranges[istart] + pos.y;
+    angle = msg->angle_min + dir + (float)iend * msg->angle_increment;
+    end[0] = cos(angle) * msg->ranges[iend] + pos.x;
+    end[1] = sin(angle) * msg->ranges[iend] + pos.y;
+    vdir = end - start;
+
+    range = LENGTH(vdir);
+    vdir /= range;
+}
+
+bool    ObjectsFromLaser::checkDirection(const sensor_msgs::LaserScan::ConstPtr &msg, vector<double> &vdir, int istart, int iend)
+{
+    vector<double> start{};
+    vector<double> end{};
+    vector<double> walldir;
+    float angle;
+    float range;
+
+
+
+    angle = msg->angle_min + dir + (float)istart * msg->angle_increment;
+    start.x = cos(angle) * msg->ranges[istart] + pos.x;
+    start.y = sin(angle) * msg->ranges[istart] + pos.y;
+    angle = msg->angle_min + dir + (float)iend * msg->angle_increment;
+    end.x = cos(angle) * msg->ranges[iend] + pos.x;
+    end.y = sin(angle) * msg->ranges[iend] + pos.y;
+    walldir.x = end.x - start.x;
+    walldir.y = end.y - start.y;
+    angle = (vdir.x * walldir.x + vdir.y * walldir.y) / (sqrtf(vdir.x * vdir.x + vdir.y * vdir.y) * sqrtf(walldir.x * walldir.x + walldir.y * walldir.y));
+    return angle < 0.99;
+
+}
+
+bool    ObjectsFromLaser::checkObjectsIntersection(const sensor_msgs::LaserScan::ConstPtr &msg, int istart, int iend)
+{
+    vec start{};
+    vec end{};
+    vec v;
+    vec between;
+    float angle;
+    float range;
+
+    angle = msg->angle_min + dir + (float)istart * msg->angle_increment;
+    start.x = cos(angle) * msg->ranges[istart] + pos.x;
+    start.y = sin(angle) * msg->ranges[istart] + pos.y;
+    angle = msg->angle_min + dir + (float)iend * msg->angle_increment;
+    end.x = cos(angle) * msg->ranges[iend] + pos.x;
+    end.y = sin(angle) * msg->ranges[iend] + pos.y;
+    v.x = end.x - start.x;
+    v.y = end.y - start.y;
+
+    for (auto wall : walls)
+    {
+        between.x = start.x - wall.start.x;
+        between.y = start.y - wall.start.y;
+        range =
+    }
+}
+
 void    ObjectsFromLaser::AddWall(const sensor_msgs::LaserScan::ConstPtr &msg)
 {
     int i = 0;
     int start = 0;
     int end = 0;
     float range;
-    vec dir;
-    Wall wall;
-
+    vector<double> vdir(2);
+    Wall wall{};
 
     while (msg->ranges.size() > start && msg->ranges.size() > end)
     {
         if (start == end && end + 1 < msg->ranges.size())
         {
-            if (checkRange())
+            if (checkRange(msg, end, end + 1))
             {
                 start++;
                 end++;
             } else
             {
-                dir = setDirection();
+                setDirection(msg, end, end + 1, vdir);
                 end++;
             }
 
         } else if (end + 1 < msg->ranges.size())
         {
-            if (checkRange(msg->ranges[end], msg->ranges[end + 1]) && checkDirection(dir, msg->ranges[end], msg->ranges[end + 1]))
+            if (checkRange(msg, end, end + 1) || checkDirection(msg, vdir, end, end + 1) || checkObjectsIntersection(msg, end, end + 1))
             {
                 MakeWall(msg, start, end);
                 start = end;
@@ -84,7 +172,7 @@ void    ObjectsFromLaser::AddObjects(const sensor_msgs::LaserScan::ConstPtr &msg
         if (msg->ranges[i] == INFINITY)
             continue;
         add = true;
-        angle = msg->angle_min + dir + i * msg->angle_increment;
+        angle = msg->angle_min + dir + (float)i * msg->angle_increment;
         point.position.x = cos(angle) * msg->ranges[i] + pos.x;
         point.position.y = sin(angle) * msg->ranges[i] + pos.y;
         point.position.z = 0.25;

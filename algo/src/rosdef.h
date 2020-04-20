@@ -23,18 +23,32 @@
 #include <visualization_msgs/MarkerArray.h>
 #include "algo/Encoder_msg.h"
 #include "algo/vector_msg.h"
-
-
+#include <boost/numeric/ublas/vector.hpp>
+#include <boost/numeric/ublas/io.hpp>
+#define LENGTH norm_2
+using namespace boost::numeric::ublas;
 struct vec
 {
     float x;
     float y;
 };
 
-struct Wall
+class Wall
 {
-    vec start;
-    vec end;
-    vec dir;
+public:
+    vector<double> *start;
+    vector<double> *end;
+    vector<double> *dir;
+    vector<double> *v;
+
+
+    Wall()
+    {
+        start = new vector<double>(2);
+        end = new vector<double>(2);
+        dir = new vector<double>(2);
+        v = new vector<double>(2);
+    }
+
 };
 #endif //SRC_ROSDEF_H
