@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
+      <config projectName="algo" targetName="rosgraph_msgs_generate_messages_cpp" />
       <config projectName="algo" targetName="tf2_msgs_generate_messages_py" />
       <config projectName="algo" targetName="actionlib_generate_messages_nodejs" />
       <config projectName="algo" targetName="tf_generate_messages_eus" />
@@ -9,11 +10,9 @@
       <config projectName="algo" targetName="clean_test_results" />
       <config projectName="algo" targetName="algo_generate_messages_eus" />
       <config projectName="algo" targetName="roscpp_generate_messages_cpp" />
-      <config projectName="algo" targetName="algo_generate_messages_py" />
-      <config projectName="algo" targetName="actionlib_generate_messages_lisp" />
+      <config projectName="algo" targetName="tf_generate_messages_nodejs" />
       <config projectName="algo" targetName="sensor_msgs_generate_messages_eus" />
       <config projectName="algo" targetName="geometry_msgs_generate_messages_cpp" />
-      <config projectName="algo" targetName="Objects" />
       <config projectName="algo" targetName="tf2_msgs_generate_messages_cpp" />
       <config projectName="algo" targetName="gtest" />
       <config projectName="algo" targetName="gmock_main" />
@@ -23,10 +22,8 @@
       <config projectName="algo" targetName="actionlib_generate_messages_py" />
       <config projectName="algo" targetName="server" />
       <config projectName="algo" targetName="roscpp_generate_messages_eus" />
-      <config projectName="algo" targetName="tf_generate_messages_nodejs" />
+      <config projectName="algo" targetName="position" />
       <config projectName="algo" targetName="algo_genpy" />
-      <config projectName="algo" targetName="gmock" />
-      <config projectName="algo" targetName="actionlib_generate_messages_cpp" />
       <config projectName="algo" targetName="std_msgs_generate_messages_nodejs" />
       <config projectName="algo" targetName="actionlib_msgs_generate_messages_cpp" />
       <config projectName="algo" targetName="std_msgs_generate_messages_cpp" />
@@ -40,40 +37,43 @@
       <config projectName="algo" targetName="tf_generate_messages_lisp" />
       <config projectName="algo" targetName="tf2_msgs_generate_messages_nodejs" />
       <config projectName="algo" targetName="visualization_msgs_generate_messages_lisp" />
+      <config projectName="algo" targetName="visualization_msgs_generate_messages_py" />
       <config projectName="algo" targetName="run_tests" />
       <config projectName="algo" targetName="geometry_msgs_generate_messages_nodejs" />
+      <config projectName="algo" targetName="sensor_msgs_generate_messages_py" />
       <config projectName="algo" targetName="geometry_msgs_generate_messages_lisp" />
       <config projectName="algo" targetName="actionlib_msgs_generate_messages_eus" />
       <config projectName="algo" targetName="std_msgs_generate_messages_eus" />
-      <config projectName="algo" targetName="algo_gennodejs" />
+      <config projectName="algo" targetName="tf2_msgs_generate_messages_lisp" />
       <config projectName="algo" targetName="visualization_msgs_generate_messages_cpp" />
       <config projectName="algo" targetName="points" />
       <config projectName="algo" targetName="algo_generate_messages_nodejs" />
-      <config projectName="algo" targetName="tf_generate_messages_cpp" />
+      <config projectName="algo" targetName="algo_generate_messages_py" />
+      <config projectName="algo" targetName="_algo_generate_messages_check_deps_vector_array" />
       <config projectName="algo" targetName="roscpp_generate_messages_nodejs" />
       <config projectName="algo" targetName="client" />
       <config projectName="algo" targetName="rosgraph_msgs_generate_messages_nodejs" />
-      <config projectName="algo" targetName="visualization_msgs_generate_messages_py" />
+      <config projectName="algo" targetName="gmock" />
       <config projectName="algo" targetName="roscpp_generate_messages_py" />
       <config projectName="algo" targetName="_algo_generate_messages_check_deps_Encoder_msg" />
       <config projectName="algo" targetName="motor" />
+      <config projectName="algo" targetName="rosgraph_msgs_generate_messages_py" />
       <config projectName="algo" targetName="algo_gencpp" />
       <config projectName="algo" targetName="actionlib_msgs_generate_messages_nodejs" />
-      <config projectName="algo" targetName="rosgraph_msgs_generate_messages_cpp" />
+      <config projectName="algo" targetName="tf_generate_messages_cpp" />
       <config projectName="algo" targetName="std_msgs_generate_messages_lisp" />
       <config projectName="algo" targetName="actionlib_msgs_generate_messages_lisp" />
       <config projectName="algo" targetName="rosgraph_msgs_generate_messages_eus" />
       <config projectName="algo" targetName="ComandReciver" />
       <config projectName="algo" targetName="rosgraph_msgs_generate_messages_lisp" />
-      <config projectName="algo" targetName="tf2_msgs_generate_messages_lisp" />
+      <config projectName="algo" targetName="actionlib_generate_messages_cpp" />
       <config projectName="algo" targetName="algo_genlisp" />
-      <config projectName="algo" targetName="sensor_msgs_generate_messages_py" />
+      <config projectName="algo" targetName="actionlib_generate_messages_lisp" />
       <config projectName="algo" targetName="download_extra_data" />
       <config projectName="algo" targetName="visualization_msgs_generate_messages_eus" />
       <config projectName="algo" targetName="algo_generate_messages_cpp" />
       <config projectName="algo" targetName="actionlib_msgs_generate_messages_py" />
       <config projectName="algo" targetName="sensor_msgs_generate_messages_lisp" />
-      <config projectName="algo" targetName="position" />
       <config projectName="algo" targetName="gtest_main" />
       <config projectName="algo" targetName="compas" />
       <config projectName="algo" targetName="tf_generate_messages_py" />
@@ -81,7 +81,7 @@
       <config projectName="algo" targetName="tests" />
       <config projectName="algo" targetName="sensor_msgs_generate_messages_nodejs" />
       <config projectName="algo" targetName="roscpp_generate_messages_lisp" />
-      <config projectName="algo" targetName="rosgraph_msgs_generate_messages_py" />
+      <config projectName="algo" targetName="algo_gennodejs" />
       <config projectName="algo" targetName="algo_geneus" />
     </generated>
   </component>
@@ -92,12 +92,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e0dda52d-ece5-4528-b096-c11cde3ced8c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/msg/vector_array.msg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dotting.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dotting.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ObjectsFromLaser.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/ObjectsFromLaser.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ObjectsFromLaser.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/ObjectsFromLaser.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PointArray.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/PointArray.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PointArray.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/PointArray.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rosdef.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/rosdef.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,425 +122,431 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/CMakeLists.txt" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
-  <component name="RunManager" selected="CMake Application.client">
-    <configuration name="ComandReciver" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="ComandReciver" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="algo" RUN_TARGET_NAME="ComandReciver">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="CMake Application.ComandReciver">
+    <configuration name="ComandReciver" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="ComandReciver" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="algo" RUN_TARGET_NAME="ComandReciver">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Objects" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="Objects" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="algo" RUN_TARGET_NAME="Objects">
+    <configuration name="_algo_generate_messages_check_deps_Encoder_msg" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="_algo_generate_messages_check_deps_Encoder_msg" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="_algo_generate_messages_check_deps_Encoder_msg" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="_algo_generate_messages_check_deps_Encoder_msg" CONFIG_NAME="Debug">
+    <configuration name="_algo_generate_messages_check_deps_vector_array" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="_algo_generate_messages_check_deps_vector_array" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="_algo_generate_messages_check_deps_vector_msg" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="_algo_generate_messages_check_deps_vector_msg" CONFIG_NAME="Debug">
+    <configuration name="_algo_generate_messages_check_deps_vector_msg" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="_algo_generate_messages_check_deps_vector_msg" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="actionlib_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="actionlib_generate_messages_cpp" CONFIG_NAME="Debug">
+    <configuration name="actionlib_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="actionlib_generate_messages_cpp" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="actionlib_generate_messages_eus" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="actionlib_generate_messages_eus" CONFIG_NAME="Debug">
+    <configuration name="actionlib_generate_messages_eus" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="actionlib_generate_messages_eus" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="actionlib_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="actionlib_generate_messages_lisp" CONFIG_NAME="Debug">
+    <configuration name="actionlib_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="actionlib_generate_messages_lisp" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="actionlib_generate_messages_nodejs" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="actionlib_generate_messages_nodejs" CONFIG_NAME="Debug">
+    <configuration name="actionlib_generate_messages_nodejs" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="actionlib_generate_messages_nodejs" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="actionlib_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="actionlib_generate_messages_py" CONFIG_NAME="Debug">
+    <configuration name="actionlib_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="actionlib_generate_messages_py" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="actionlib_msgs_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="actionlib_msgs_generate_messages_cpp" CONFIG_NAME="Debug">
+    <configuration name="actionlib_msgs_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="actionlib_msgs_generate_messages_cpp" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="actionlib_msgs_generate_messages_eus" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="actionlib_msgs_generate_messages_eus" CONFIG_NAME="Debug">
+    <configuration name="actionlib_msgs_generate_messages_eus" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="actionlib_msgs_generate_messages_eus" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="actionlib_msgs_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="actionlib_msgs_generate_messages_lisp" CONFIG_NAME="Debug">
+    <configuration name="actionlib_msgs_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="actionlib_msgs_generate_messages_lisp" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="actionlib_msgs_generate_messages_nodejs" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="actionlib_msgs_generate_messages_nodejs" CONFIG_NAME="Debug">
+    <configuration name="actionlib_msgs_generate_messages_nodejs" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="actionlib_msgs_generate_messages_nodejs" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="actionlib_msgs_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="actionlib_msgs_generate_messages_py" CONFIG_NAME="Debug">
+    <configuration name="actionlib_msgs_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="actionlib_msgs_generate_messages_py" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="algo_gencpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="algo_gencpp" CONFIG_NAME="Debug">
+    <configuration name="algo_gencpp" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="algo_gencpp" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="algo_generate_messages" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="algo_generate_messages" CONFIG_NAME="Debug">
+    <configuration name="algo_generate_messages" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="algo_generate_messages" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="algo_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="algo_generate_messages_cpp" CONFIG_NAME="Debug">
+    <configuration name="algo_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="algo_generate_messages_cpp" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="algo_generate_messages_eus" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="algo_generate_messages_eus" CONFIG_NAME="Debug">
+    <configuration name="algo_generate_messages_eus" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="algo_generate_messages_eus" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="algo_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="algo_generate_messages_lisp" CONFIG_NAME="Debug">
+    <configuration name="algo_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="algo_generate_messages_lisp" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="algo_generate_messages_nodejs" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="algo_generate_messages_nodejs" CONFIG_NAME="Debug">
+    <configuration name="algo_generate_messages_nodejs" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="algo_generate_messages_nodejs" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="algo_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="algo_generate_messages_py" CONFIG_NAME="Debug">
+    <configuration name="algo_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="algo_generate_messages_py" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="algo_geneus" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="algo_geneus" CONFIG_NAME="Debug">
+    <configuration name="algo_geneus" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="algo_geneus" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="algo_genlisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="algo_genlisp" CONFIG_NAME="Debug">
+    <configuration name="algo_genlisp" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="algo_genlisp" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="algo_gennodejs" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="algo_gennodejs" CONFIG_NAME="Debug">
+    <configuration name="algo_gennodejs" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="algo_gennodejs" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="algo_genpy" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="algo_genpy" CONFIG_NAME="Debug">
+    <configuration name="algo_genpy" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="algo_genpy" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="clean_test_results" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="clean_test_results" CONFIG_NAME="Debug">
+    <configuration name="clean_test_results" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="clean_test_results" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="client" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="client" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="algo" RUN_TARGET_NAME="client">
+    <configuration name="client" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="client" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="algo" RUN_TARGET_NAME="client">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="compas" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="compas" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="algo" RUN_TARGET_NAME="compas">
+    <configuration name="compas" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="compas" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="algo" RUN_TARGET_NAME="compas">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="download_extra_data" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="download_extra_data" CONFIG_NAME="Debug">
+    <configuration name="download_extra_data" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="download_extra_data" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="doxygen" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="doxygen" CONFIG_NAME="Debug">
+    <configuration name="doxygen" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="doxygen" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="geometry_msgs_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="geometry_msgs_generate_messages_cpp" CONFIG_NAME="Debug">
+    <configuration name="geometry_msgs_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="geometry_msgs_generate_messages_cpp" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="geometry_msgs_generate_messages_eus" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="geometry_msgs_generate_messages_eus" CONFIG_NAME="Debug">
+    <configuration name="geometry_msgs_generate_messages_eus" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="geometry_msgs_generate_messages_eus" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="geometry_msgs_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="geometry_msgs_generate_messages_lisp" CONFIG_NAME="Debug">
+    <configuration name="geometry_msgs_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="geometry_msgs_generate_messages_lisp" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="geometry_msgs_generate_messages_nodejs" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="geometry_msgs_generate_messages_nodejs" CONFIG_NAME="Debug">
+    <configuration name="geometry_msgs_generate_messages_nodejs" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="geometry_msgs_generate_messages_nodejs" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="geometry_msgs_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="geometry_msgs_generate_messages_py" CONFIG_NAME="Debug">
+    <configuration name="geometry_msgs_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="geometry_msgs_generate_messages_py" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="gmock" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="gmock" CONFIG_NAME="Debug">
+    <configuration name="gmock" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="gmock" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="gmock_main" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="gmock_main" CONFIG_NAME="Debug">
+    <configuration name="gmock_main" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="gmock_main" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="gtest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="gtest" CONFIG_NAME="Debug">
+    <configuration name="gtest" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="gtest" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="gtest_main" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="gtest_main" CONFIG_NAME="Debug">
+    <configuration name="gtest_main" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="gtest_main" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="main" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="main" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="algo" RUN_TARGET_NAME="main">
+    <configuration name="main" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="main" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="algo" RUN_TARGET_NAME="main">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="motor" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="motor" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="algo" RUN_TARGET_NAME="motor">
+    <configuration name="motor" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="motor" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="algo" RUN_TARGET_NAME="motor">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="points" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="points" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="algo" RUN_TARGET_NAME="points">
+    <configuration name="points" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="points" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="algo" RUN_TARGET_NAME="points">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="position" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="position" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="algo" RUN_TARGET_NAME="position">
+    <configuration name="position" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="position" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="algo" RUN_TARGET_NAME="position">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="roscpp_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="roscpp_generate_messages_cpp" CONFIG_NAME="Debug">
+    <configuration name="roscpp_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="roscpp_generate_messages_cpp" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="roscpp_generate_messages_eus" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="roscpp_generate_messages_eus" CONFIG_NAME="Debug">
+    <configuration name="roscpp_generate_messages_eus" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="roscpp_generate_messages_eus" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="roscpp_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="roscpp_generate_messages_lisp" CONFIG_NAME="Debug">
+    <configuration name="roscpp_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="roscpp_generate_messages_lisp" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="roscpp_generate_messages_nodejs" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="roscpp_generate_messages_nodejs" CONFIG_NAME="Debug">
+    <configuration name="roscpp_generate_messages_nodejs" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="roscpp_generate_messages_nodejs" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="roscpp_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="roscpp_generate_messages_py" CONFIG_NAME="Debug">
+    <configuration name="roscpp_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="roscpp_generate_messages_py" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="rosgraph_msgs_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="rosgraph_msgs_generate_messages_cpp" CONFIG_NAME="Debug">
+    <configuration name="rosgraph_msgs_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="rosgraph_msgs_generate_messages_cpp" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="rosgraph_msgs_generate_messages_eus" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="rosgraph_msgs_generate_messages_eus" CONFIG_NAME="Debug">
+    <configuration name="rosgraph_msgs_generate_messages_eus" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="rosgraph_msgs_generate_messages_eus" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="rosgraph_msgs_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="rosgraph_msgs_generate_messages_lisp" CONFIG_NAME="Debug">
+    <configuration name="rosgraph_msgs_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="rosgraph_msgs_generate_messages_lisp" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="rosgraph_msgs_generate_messages_nodejs" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="rosgraph_msgs_generate_messages_nodejs" CONFIG_NAME="Debug">
+    <configuration name="rosgraph_msgs_generate_messages_nodejs" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="rosgraph_msgs_generate_messages_nodejs" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="rosgraph_msgs_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="rosgraph_msgs_generate_messages_py" CONFIG_NAME="Debug">
+    <configuration name="rosgraph_msgs_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="rosgraph_msgs_generate_messages_py" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="run_tests" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="run_tests" CONFIG_NAME="Debug">
+    <configuration name="run_tests" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="run_tests" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="sensor_msgs_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="sensor_msgs_generate_messages_cpp" CONFIG_NAME="Debug">
+    <configuration name="sensor_msgs_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="sensor_msgs_generate_messages_cpp" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="sensor_msgs_generate_messages_eus" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="sensor_msgs_generate_messages_eus" CONFIG_NAME="Debug">
+    <configuration name="sensor_msgs_generate_messages_eus" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="sensor_msgs_generate_messages_eus" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="sensor_msgs_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="sensor_msgs_generate_messages_lisp" CONFIG_NAME="Debug">
+    <configuration name="sensor_msgs_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="sensor_msgs_generate_messages_lisp" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="sensor_msgs_generate_messages_nodejs" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="sensor_msgs_generate_messages_nodejs" CONFIG_NAME="Debug">
+    <configuration name="sensor_msgs_generate_messages_nodejs" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="sensor_msgs_generate_messages_nodejs" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="sensor_msgs_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="sensor_msgs_generate_messages_py" CONFIG_NAME="Debug">
+    <configuration name="sensor_msgs_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="sensor_msgs_generate_messages_py" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="server" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="server" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="algo" RUN_TARGET_NAME="server">
+    <configuration name="server" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="server" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="algo" RUN_TARGET_NAME="server">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="std_msgs_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="std_msgs_generate_messages_cpp" CONFIG_NAME="Debug">
+    <configuration name="std_msgs_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="std_msgs_generate_messages_cpp" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="std_msgs_generate_messages_eus" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="std_msgs_generate_messages_eus" CONFIG_NAME="Debug">
+    <configuration name="std_msgs_generate_messages_eus" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="std_msgs_generate_messages_eus" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="std_msgs_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="std_msgs_generate_messages_lisp" CONFIG_NAME="Debug">
+    <configuration name="std_msgs_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="std_msgs_generate_messages_lisp" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="std_msgs_generate_messages_nodejs" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="std_msgs_generate_messages_nodejs" CONFIG_NAME="Debug">
+    <configuration name="std_msgs_generate_messages_nodejs" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="std_msgs_generate_messages_nodejs" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="std_msgs_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="std_msgs_generate_messages_py" CONFIG_NAME="Debug">
+    <configuration name="std_msgs_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="std_msgs_generate_messages_py" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="tests" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="tests" CONFIG_NAME="Debug">
+    <configuration name="tests" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="tests" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="tf2_msgs_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="tf2_msgs_generate_messages_cpp" CONFIG_NAME="Debug">
+    <configuration name="tf2_msgs_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="tf2_msgs_generate_messages_cpp" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="tf2_msgs_generate_messages_eus" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="tf2_msgs_generate_messages_eus" CONFIG_NAME="Debug">
+    <configuration name="tf2_msgs_generate_messages_eus" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="tf2_msgs_generate_messages_eus" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="tf2_msgs_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="tf2_msgs_generate_messages_lisp" CONFIG_NAME="Debug">
+    <configuration name="tf2_msgs_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="tf2_msgs_generate_messages_lisp" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="tf2_msgs_generate_messages_nodejs" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="tf2_msgs_generate_messages_nodejs" CONFIG_NAME="Debug">
+    <configuration name="tf2_msgs_generate_messages_nodejs" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="tf2_msgs_generate_messages_nodejs" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="tf2_msgs_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="tf2_msgs_generate_messages_py" CONFIG_NAME="Debug">
+    <configuration name="tf2_msgs_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="tf2_msgs_generate_messages_py" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="tf_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="tf_generate_messages_cpp" CONFIG_NAME="Debug">
+    <configuration name="tf_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="tf_generate_messages_cpp" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="tf_generate_messages_eus" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="tf_generate_messages_eus" CONFIG_NAME="Debug">
+    <configuration name="tf_generate_messages_eus" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="tf_generate_messages_eus" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="tf_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="tf_generate_messages_lisp" CONFIG_NAME="Debug">
+    <configuration name="tf_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="tf_generate_messages_lisp" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="tf_generate_messages_nodejs" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="tf_generate_messages_nodejs" CONFIG_NAME="Debug">
+    <configuration name="tf_generate_messages_nodejs" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="tf_generate_messages_nodejs" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="tf_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="tf_generate_messages_py" CONFIG_NAME="Debug">
+    <configuration name="tf_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="tf_generate_messages_py" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="visualization_msgs_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="visualization_msgs_generate_messages_cpp" CONFIG_NAME="Debug">
+    <configuration name="visualization_msgs_generate_messages_cpp" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="visualization_msgs_generate_messages_cpp" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="visualization_msgs_generate_messages_eus" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="visualization_msgs_generate_messages_eus" CONFIG_NAME="Debug">
+    <configuration name="visualization_msgs_generate_messages_eus" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="visualization_msgs_generate_messages_eus" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="visualization_msgs_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="visualization_msgs_generate_messages_lisp" CONFIG_NAME="Debug">
+    <configuration name="visualization_msgs_generate_messages_lisp" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="visualization_msgs_generate_messages_lisp" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="visualization_msgs_generate_messages_nodejs" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="visualization_msgs_generate_messages_nodejs" CONFIG_NAME="Debug">
+    <configuration name="visualization_msgs_generate_messages_nodejs" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="visualization_msgs_generate_messages_nodejs" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="visualization_msgs_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="visualization_msgs_generate_messages_py" CONFIG_NAME="Debug">
+    <configuration name="visualization_msgs_generate_messages_py" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="visualization_msgs_generate_messages_py" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <list>
       <item itemvalue="CMake Application.ComandReciver" />
-      <item itemvalue="CMake Application.Objects" />
       <item itemvalue="CMake Application._algo_generate_messages_check_deps_Encoder_msg" />
+      <item itemvalue="CMake Application._algo_generate_messages_check_deps_vector_array" />
       <item itemvalue="CMake Application._algo_generate_messages_check_deps_vector_msg" />
       <item itemvalue="CMake Application.actionlib_generate_messages_cpp" />
       <item itemvalue="CMake Application.actionlib_generate_messages_eus" />
@@ -627,21 +640,76 @@
       <workItem from="1584463022063" duration="35000" />
       <workItem from="1587463100533" duration="2604000" />
       <workItem from="1587477682049" duration="1694000" />
-      <workItem from="1588592166226" duration="3056000" />
+      <workItem from="1588592166226" duration="3217000" />
+      <workItem from="1588958517353" duration="430000" />
+      <workItem from="1589026478352" duration="4365000" />
+      <workItem from="1589113695776" duration="3403000" />
+      <workItem from="1589129441424" duration="10000" />
+      <workItem from="1589129481950" duration="868000" />
+      <workItem from="1589130754724" duration="2438000" />
+      <workItem from="1589251874974" duration="1400000" />
+      <workItem from="1589284882602" duration="1755000" />
+      <workItem from="1589289784104" duration="379000" />
+      <workItem from="1589290229250" duration="112000" />
+      <workItem from="1589290384475" duration="1827000" />
     </task>
+    <task id="LOCAL-00001" summary="objects intersecton">
+      <created>1588605796901</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1588605796901</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="objects intersecton" />
+    <option name="LAST_COMMIT_MESSAGE" value="objects intersecton" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="860" y="268" width="860" height="847" key="CommitChangelistDialog2" timestamp="1588605796825">
+      <screen x="0" y="27" width="1920" height="1173" />
+    </state>
+    <state x="860" y="268" width="860" height="847" key="CommitChangelistDialog2/0.27.1920.1173@0.27.1920.1173" timestamp="1588605796825" />
     <state x="483" y="353" width="424" height="484" key="FileChooserDialogImpl" timestamp="1584463054729">
       <screen x="0" y="27" width="1920" height="1130" />
     </state>
     <state x="483" y="353" width="424" height="484" key="FileChooserDialogImpl/0.27.1920.1130@0.27.1920.1130" timestamp="1584463054729" />
-    <state x="616" y="440" key="com.intellij.ide.util.TipDialog" timestamp="1588592189990">
+    <state width="1874" height="318" key="GridCell.Tab.0.bottom" timestamp="1589133153928">
       <screen x="0" y="27" width="1920" height="1173" />
     </state>
-    <state x="616" y="440" key="com.intellij.ide.util.TipDialog/0.27.1920.1173@0.27.1920.1173" timestamp="1588592189990" />
+    <state width="1874" height="318" key="GridCell.Tab.0.bottom/0.27.1920.1173@0.27.1920.1173" timestamp="1589133153928" />
+    <state width="1874" height="318" key="GridCell.Tab.0.center" timestamp="1589133153927">
+      <screen x="0" y="27" width="1920" height="1173" />
+    </state>
+    <state width="1874" height="318" key="GridCell.Tab.0.center/0.27.1920.1173@0.27.1920.1173" timestamp="1589133153927" />
+    <state width="1874" height="318" key="GridCell.Tab.0.left" timestamp="1589133153927">
+      <screen x="0" y="27" width="1920" height="1173" />
+    </state>
+    <state width="1874" height="318" key="GridCell.Tab.0.left/0.27.1920.1173@0.27.1920.1173" timestamp="1589133153927" />
+    <state width="1874" height="318" key="GridCell.Tab.0.right" timestamp="1589133153928">
+      <screen x="0" y="27" width="1920" height="1173" />
+    </state>
+    <state width="1874" height="318" key="GridCell.Tab.0.right/0.27.1920.1173@0.27.1920.1173" timestamp="1589133153928" />
+    <state x="555" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1588605808829">
+      <screen x="0" y="27" width="1920" height="1173" />
+    </state>
+    <state x="555" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2/0.27.1920.1173@0.27.1920.1173" timestamp="1588605808829" />
+    <state x="616" y="440" key="com.intellij.ide.util.TipDialog" timestamp="1589130755163">
+      <screen x="0" y="27" width="1920" height="1173" />
+    </state>
+    <state x="616" y="440" key="com.intellij.ide.util.TipDialog/0.27.1920.1173@0.27.1920.1173" timestamp="1589130755163" />
+    <state x="624" y="283" key="run.anything.popup" timestamp="1589289694768">
+      <screen x="0" y="27" width="1920" height="1173" />
+    </state>
+    <state x="624" y="283" key="run.anything.popup/0.27.1920.1173@0.27.1920.1173" timestamp="1589289694768" />
+    <state x="623" y="287" width="672" height="678" key="search.everywhere.popup" timestamp="1589289350813">
+      <screen x="0" y="27" width="1920" height="1173" />
+    </state>
+    <state x="623" y="287" width="672" height="678" key="search.everywhere.popup/0.27.1920.1173@0.27.1920.1173" timestamp="1589289350813" />
   </component>
 </project>

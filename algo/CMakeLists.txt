@@ -58,6 +58,7 @@ find_package(catkin REQUIRED COMPONENTS
    FILES
    Encoder_msg.msg
          vector_msg.msg
+         vector_array.msg
  )
 
 ## Generate services in the 'srv' folder
@@ -77,7 +78,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## Generate added messages and services with any dependencies listed here
  generate_messages(
    DEPENDENCIES
-   std_msgs visualization_msgs
+   std_msgs visualization_msgs algo
  )
 
 ################################################
@@ -227,5 +228,5 @@ add_executable(motor src/rosdef.cpp src/MotorController.cpp src/MotorController.
 target_link_libraries(motor ${catkin_LIBRARIES})
 add_executable(points src/PointArray.cpp src/PointArray.h)
 target_link_libraries(points ${catkin_LIBRARIES})
-add_executable(Objects src/ObjectsFromLaser.cpp src/ObjectsFromLaser.h)
-target_link_libraries(Objects ${catkin_LIBRARIES})
+#add_executable(Objects src/ObjectsFromLaser.cpp src/ObjectsFromLaser.h)
+#target_link_libraries(Objects ${catkin_LIBRARIES})

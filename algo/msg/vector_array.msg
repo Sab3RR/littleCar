@@ -1,0 +1,1 @@
+algo/vector_msg[] vec

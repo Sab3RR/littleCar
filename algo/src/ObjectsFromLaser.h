@@ -34,7 +34,9 @@ public:
     void     setDirection(const sensor_msgs::LaserScan::ConstPtr &msg, int istart, int iend, vector<double> &vdir);
     bool    checkDirection(const sensor_msgs::LaserScan::ConstPtr &msg, vector<double> &vdir, int istart, int iend);
     bool    checkObjectsIntersection(const sensor_msgs::LaserScan::ConstPtr &msg, int istart, int iend);
-
+    void    createVector(const sensor_msgs::LaserScan::ConstPtr &msg, int index, vector<double> &vect);
+    void    intersectionByLidar(vector<double> &start, vector<double> &end);
+    void    intersect(vector<double> vect, Wall wall);
 };
 
 

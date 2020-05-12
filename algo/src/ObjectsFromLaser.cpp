@@ -87,6 +87,44 @@ bool    ObjectsFromLaser::checkDirection(const sensor_msgs::LaserScan::ConstPtr 
     return angle < 0.99;
 
 }
+void    ObjectsFromLaser::createVector(const sensor_msgs::LaserScan::ConstPtr &msg, int index, vector<double> &vect)
+{
+    double angle;
+
+    angle = msg->angle_min + dir + index * msg->angle_increment;
+    vect[0] = cos(angle);
+    vect[1] = sin(angle);
+}
+
+void    ObjectsFromLaser::intersect(vector<double> vect, Wall wall)
+{
+    vector<double> start;
+    vector<double> end;
+    double res1;
+    double res2;
+
+    start[0] = pos.x;
+    start[1] = pos.y;
+
+    end = vect + start;
+
+    
+
+}
+
+void    ObjectsFromLaser::intersectionByLidar(vector<double> &start, vector<double> &end)
+{
+    auto i = walls.begin();
+
+    while (i != walls.end())
+    {
+        if (intersect(start, *i) && intersect(end, *i))
+        {
+            cutWall(start, end, *i);
+
+        }
+    }
+}
 
 bool    ObjectsFromLaser::checkObjectsIntersection(const sensor_msgs::LaserScan::ConstPtr &msg, int istart, int iend)
 {

@@ -23,8 +23,10 @@
 #include <visualization_msgs/MarkerArray.h>
 #include "algo/Encoder_msg.h"
 #include "algo/vector_msg.h"
+#include "algo/vector_array.h"
 #include <boost/numeric/ublas/vector.hpp>
 #include <boost/numeric/ublas/io.hpp>
+#include <vector>
 #define LENGTH norm_2
 using namespace boost::numeric::ublas;
 struct vec
@@ -50,5 +52,15 @@ public:
         v = new vector<double>(2);
     }
 
+};
+
+class Sector
+{
+public:
+    vec leftup;
+    vec leftdown;
+    vec rightup;
+    vec rightdown;
+    std::vector<Sector *> transit;
 };
 #endif //SRC_ROSDEF_H
