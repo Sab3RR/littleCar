@@ -1,5 +1,7 @@
 #include "MotorController.h"
 #include "Encoders.h"
+#include "rosdef.h"
+
 
 int main(int ac, char** av)
 {
@@ -13,3 +15,5 @@ int main(int ac, char** av)
     ros::spin();
     return 0;
 }
+
+

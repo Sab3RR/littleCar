@@ -228,5 +228,7 @@ add_executable(motor src/rosdef.cpp src/MotorController.cpp src/MotorController.
 target_link_libraries(motor ${catkin_LIBRARIES})
 add_executable(points src/PointArray.cpp src/PointArray.h)
 target_link_libraries(points ${catkin_LIBRARIES})
+add_executable(dotting src/dotting.cpp src/dotting.h)
+target_link_libraries(dotting ${catkin_LIBRARIES})
 #add_executable(Objects src/ObjectsFromLaser.cpp src/ObjectsFromLaser.h)
 #target_link_libraries(Objects ${catkin_LIBRARIES})

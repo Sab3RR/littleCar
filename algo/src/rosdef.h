@@ -57,10 +57,10 @@ public:
 class Sector
 {
 public:
-    vec leftup;
-    vec leftdown;
-    vec rightup;
-    vec rightdown;
+    vector<double> leftup = vector<double>(2);
+    vector<double> leftdown = vector<double>(2);
+    vector<double> rightup = vector<double>(2);
+    vector<double> rightdown =  vector<double>(2);
     std::vector<Sector *> transit;
 };
 #endif //SRC_ROSDEF_H
