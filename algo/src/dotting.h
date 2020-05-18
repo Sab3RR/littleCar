@@ -5,7 +5,7 @@
 #ifndef ALGO_DOTTING_H
 #define ALGO_DOTTING_H
 #include "rosdef.h"
-#define WIDTH 0.15
+#define WIDTH 0.5f
 
 enum corners
 {

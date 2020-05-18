@@ -4,16 +4,14 @@
 
 #include "dotting.h"
 
-dotting::dotting(ros::NodeHandle *n)
-{
+dotting::dotting(ros::NodeHandle *n) {
     Sector sector;
-    sectors.push_back(sector);
-    sectors.push_back(sector);
-    sectors.push_back(sector);
-    sectors.push_back(sector);
+
+    for (int i = 0; i != 7; i++)
+        sectors.push_back(sector);
     marker_pub = n->advertise<visualization_msgs::Marker>("visualization_marker", 10);
     pubdots = n->advertise<algo::vector_array>("destination", 1);
-    sectors[0].rightdown[0] = -0.15f;
+    /*sectors[0].rightdown[0] = -0.15f;
     sectors[0].rightdown[1] = -0.15f;
     sectors[0].rightup[0] = -0.15f;
     sectors[0].rightup[1] = 1.15f;
@@ -44,7 +42,64 @@ dotting::dotting(ros::NodeHandle *n)
     sectors[3].leftup[0] = -0.15f;
     sectors[3].leftup[1] = 1.15f;
     sectors[3].rightup[0] = -1.30f;
-    sectors[3].rightup[1] = 1.15f;
+    sectors[3].rightup[1] = 1.15f;*/
+    sectors[0].rightdown[0] = -0.15f;
+    sectors[0].rightdown[1] = -0.15f;
+    sectors[0].rightup[0] = -0.15f;
+    sectors[0].rightup[1] = 19.85f;
+    sectors[0].leftdown[0] = 9.85f;
+    sectors[0].leftdown[1] = -0.15f;
+    sectors[0].leftup[0] = 9.85f;
+    sectors[0].leftup[1] = 19.85f;
+    sectors[1].rightdown[0] = 0.85f;
+    sectors[1].rightdown[1] = 19.85f;
+    sectors[1].rightup[0] = 0.85f;
+    sectors[1].rightup[1] = 24.85f;
+    sectors[1].leftdown[0] = 9.85f;
+    sectors[1].leftdown[1] = 19.85f;
+    sectors[1].leftup[0] = 9.85f;
+    sectors[1].leftup[1] = 24.85f;
+    sectors[2].rightdown[0] = 0.85f;
+    sectors[2].rightdown[1] = 24.85f;
+    sectors[2].rightup[0] = 0.85f;
+    sectors[2].rightup[1] = 34.85f;
+    sectors[2].leftdown[0] = 5.85f;
+    sectors[2].leftdown[1] = 24.85f;
+    sectors[2].leftup[0] = 5.85f;
+    sectors[2].leftup[1] = 34.85f;
+    sectors[3].rightdown[0] = 0.85f;
+    sectors[3].rightdown[1] = 36.85f;
+    sectors[3].rightup[0] = 0.85f;
+    sectors[3].rightup[1] = 51.85f;
+    sectors[3].leftdown[0] = 5.85f;
+    sectors[3].leftdown[1] = 36.85f;
+    sectors[3].leftup[0] = 5.85f;
+    sectors[3].leftup[1] = 51.85f;
+    sectors[4].rightdown[0] = 0.85f;
+    sectors[4].rightdown[1] = 34.85f;
+    sectors[4].rightup[0] = 0.85f;
+    sectors[4].rightup[1] = 36.85f;
+    sectors[4].leftdown[0] = 9.85f;
+    sectors[4].leftdown[1] = 34.85f;
+    sectors[4].leftup[0] = 9.85f;
+    sectors[4].leftup[1] = 36.85f;
+    sectors[5].rightdown[0] = 6.85f;
+    sectors[5].rightdown[1] = 36.85f;
+    sectors[5].rightup[0] = 6.85f;
+    sectors[5].rightup[1] = 51.85f;
+    sectors[5].leftdown[0] = 8.85f;
+    sectors[5].leftdown[1] = 36.85f;
+    sectors[5].leftup[0] = 8.85f;
+    sectors[5].leftup[1] = 51.85f;
+    sectors[6].rightdown[0] = 6.85f;
+    sectors[6].rightdown[1] = 24.85f;
+    sectors[6].rightup[0] = 6.85f;
+    sectors[6].rightup[1] = 34.85f;
+    sectors[6].leftdown[0] = 8.85f;
+    sectors[6].leftdown[1] = 24.85f;
+    sectors[6].leftup[0] = 8.85f;
+    sectors[6].leftup[1] = 34.85f;
+
 
 }
 
@@ -141,7 +196,7 @@ bool    dotting::downdots(vector<double> &dot, vector<double> &down, vector<doub
         coorddown += WIDTH;
         if (coorddown > lenghtdown) {
             cos = angle(down, farest);
-            if ((coorddown - lenghtdown) / cos > lenghtfarest || (coorddown - lenghtdown) / cos < 0)
+            if (coorddown  > lenghtdown + lenghtfarest * cos)
                 return true;
             dot = start + down + dirfarest * ((coorddown - lenghtdown) / cos);
             dots.push_back(dot);
@@ -159,7 +214,7 @@ bool    dotting::downdots(vector<double> &dot, vector<double> &down, vector<doub
         cos3 = angle(down, farest);
         direction(farest, dirfarest);
     }
-        if (coorddown / cos <= lenghtnearest && coorddown / cos > 0)
+        if (coorddown <= lenghtnearest * cos)
         {
             dot = start + dirnearest * (coorddown / cos);
             dots.push_back(dot);
@@ -215,7 +270,7 @@ bool        dotting::updots(vector<double> &dot, vector<double> &down, vector<do
         cos3 = angle(down, farest);
         direction(farest, dirfarest);
     }
-    if (coorddown / cos <= lenghtnearest && coorddown / cos > 0)
+    if (coorddown <= lenghtnearest * cos)
     {
         dot = start + dirnearest * (coorddown / cos);
         dots.push_back(dot);
@@ -234,7 +289,7 @@ bool        dotting::updots(vector<double> &dot, vector<double> &down, vector<do
     if (coorddown > lenghtdown)
     {
         cos = angle(down, farest);
-        if ((coorddown - lenghtdown) / cos > lenghtfarest || (coorddown - lenghtdown) / cos < 0)
+        if (coorddown  > lenghtdown + lenghtfarest * cos)
             return true;
         dot = start + down + dirfarest * ((coorddown - lenghtdown) / cos);
         dots.push_back(dot);
@@ -292,13 +347,33 @@ void    dotting::createWay(Sector &sector)
             up = copysector.rightup - copysector.leftup;
             left = copysector.leftup - copysector.leftdown;
             dot = copysector.leftdown;
-            while (true)
+            if (LENGTH(down) < LENGTH(left))
+            {
+                while (true)
+                {
+                    if (downdots(dot, down, left, up, right, copysector.leftdown))
+                        break;
+                    else if(updots(dot, down, left, up, right, copysector.leftdown))
+                        break;
+                }
+            } else
+            {
+                while (true)
+                {
+                    if (downdots(dot, left, down, right, up, copysector.leftdown))
+                        break;
+                    else if(updots(dot, left, down, right, up, copysector.leftdown))
+                        break;
+                }
+            }
+            /*while (true)
             {
                 if (downdots(dot, down, left, up, right, copysector.leftdown))
                     break;
                 else if(updots(dot, down, left, up, right, copysector.leftdown))
                     break;
-            }
+            }*/
+
             break;
         case corners::RIGHTDOWN :
             right = copysector.rightup - copysector.rightdown;
@@ -306,13 +381,27 @@ void    dotting::createWay(Sector &sector)
             up = copysector.leftup - copysector.rightup;
             left = copysector.leftup - copysector.leftdown;
             dot = copysector.rightdown;
-            while (true)
+            if (LENGTH(down) < LENGTH(right))
             {
-                if (downdots(dot, down, right, up, left, copysector.rightdown))
-                    break;
-                else if(updots(dot, down, right, up, left, copysector.rightdown))
-                    break;
+                while (true)
+                {
+                    if (downdots(dot, down, right, up, left, copysector.rightdown))
+                        break;
+                    else if(updots(dot, down, right, up, left, copysector.rightdown))
+                        break;
+                }
+            } else
+            {
+                while (true)
+                {
+                    if (downdots(dot, right, up, left, down, copysector.rightdown))
+                        break;
+                    else if(updots(dot, right, up, left, down, copysector.rightdown))
+                        break;
+                }
             }
+
+
             break;
         case corners::RIGHTUP :
             right = copysector.leftdown - copysector.leftup;
@@ -320,19 +409,32 @@ void    dotting::createWay(Sector &sector)
             up = copysector.leftdown - copysector.rightdown;
             left = copysector.rightdown - copysector.rightup;
             dot = copysector.rightup;
-            while (true)
+            if (LENGTH(down) < LENGTH(left))
             {
-                if (downdots(dot, down, left, up, right, copysector.rightup))
-                    break;
-                else if(updots(dot, down, left, up, right, copysector.rightup))
-                    break;
+                while (true)
+                {
+                    if (downdots(dot, down, left, up, right, copysector.rightup))
+                        break;
+                    else if(updots(dot, down, left, up, right, copysector.rightup))
+                        break;
+                }
+            } else
+            {
+                while (true)
+                {
+                    if (downdots(dot, left, up, right, down, copysector.rightup))
+                        break;
+                    else if(updots(dot, left, up, right, down, copysector.rightup))
+                        break;
+                }
             }
+
             break;
     }
-    for (auto j = dots.begin(); j != dots.end(); j++)
+    /*for (auto j = dots.begin(); j != dots.end(); j++)
     {
         std::cout << *j << std::endl;
-    }
+    }*/
 }
 
 void    dotting::startdotting()
