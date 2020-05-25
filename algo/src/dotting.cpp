@@ -7,10 +7,10 @@
 dotting::dotting(ros::NodeHandle *n) {
     Sector sector;
 
-    for (int i = 0; i != 7; i++)
+    for (int i = 0; i != 3; i++)
         sectors.push_back(sector);
     marker_pub = n->advertise<visualization_msgs::Marker>("visualization_marker", 10);
-    pubdots = n->advertise<algo::vector_array>("destination", 1);
+    pubdots = n->advertise<algo::vector_array>("dots", 1);
     /*sectors[0].rightdown[0] = -0.15f;
     sectors[0].rightdown[1] = -0.15f;
     sectors[0].rightup[0] = -0.15f;
@@ -43,7 +43,7 @@ dotting::dotting(ros::NodeHandle *n) {
     sectors[3].leftup[1] = 1.15f;
     sectors[3].rightup[0] = -1.30f;
     sectors[3].rightup[1] = 1.15f;*/
-    sectors[0].rightdown[0] = -0.15f;
+    /*sectors[0].rightdown[0] = -0.15f;
     sectors[0].rightdown[1] = -0.15f;
     sectors[0].rightup[0] = -0.15f;
     sectors[0].rightup[1] = 19.85f;
@@ -98,7 +98,33 @@ dotting::dotting(ros::NodeHandle *n) {
     sectors[6].leftdown[0] = 8.85f;
     sectors[6].leftdown[1] = 24.85f;
     sectors[6].leftup[0] = 8.85f;
-    sectors[6].leftup[1] = 34.85f;
+    sectors[6].leftup[1] = 34.85f;*/
+    sectors[0].rightdown[0] = 1.f;
+    sectors[0].rightdown[1] = 0.f;
+    sectors[0].rightup[0] = 1.f;
+    sectors[0].rightup[1] = 0.5f;
+    sectors[0].leftdown[0] = 0.f;
+    sectors[0].leftdown[1] = 0.f;
+    sectors[0].leftup[0] = 0.f;
+    sectors[0].leftup[1] = 0.5f;
+    sectors[1].rightdown[0] = 1.5f;
+    sectors[1].rightdown[1] = 0.f;
+    sectors[1].rightup[0] = 1.5f;
+    sectors[1].rightup[1] = 1.f;
+    sectors[1].leftdown[0] = 1.f;
+    sectors[1].leftdown[1] = 0.f;
+    sectors[1].leftup[0] = 1.f;
+    sectors[1].leftup[1] = 1.f;
+    sectors[2].rightdown[0] = 1.f;
+    sectors[2].rightdown[1] = 0.5f;
+    sectors[2].rightup[0] = 1.f;
+    sectors[2].rightup[1] = 1.f;
+    sectors[2].leftdown[0] = 0.f;
+    sectors[2].leftdown[1] = 0.5f;
+    sectors[2].leftup[0] = 0.f;
+    sectors[2].leftup[1] = 1.f;
+
+
 
 
 }
@@ -214,7 +240,7 @@ bool    dotting::downdots(vector<double> &dot, vector<double> &down, vector<doub
         cos3 = angle(down, farest);
         direction(farest, dirfarest);
     }
-        if (coorddown <= lenghtnearest * cos)
+        if (coorddown < lenghtnearest * cos)
         {
             dot = start + dirnearest * (coorddown / cos);
             dots.push_back(dot);
@@ -270,7 +296,7 @@ bool        dotting::updots(vector<double> &dot, vector<double> &down, vector<do
         cos3 = angle(down, farest);
         direction(farest, dirfarest);
     }
-    if (coorddown <= lenghtnearest * cos)
+    if (coorddown < lenghtnearest * cos)
     {
         dot = start + dirnearest * (coorddown / cos);
         dots.push_back(dot);
@@ -439,11 +465,30 @@ void    dotting::createWay(Sector &sector)
 
 void    dotting::startdotting()
 {
-
+    vector<double> dot(2);
+    algo::vector_array arr;
+    algo::vector_msg msg;
 
     for (int i = 0; i != sectors.size(); i++)
     {
         coorddown = 0.f;
+        if (i == 1)
+        {
+            dot[0] = 0.85;
+            dot[1] = 0.25;
+            dots.push_back(dot);
+            dot[0] = 1.15;
+            dot[1] = 0.25;
+            dots.push_back(dot);
+        } else if( i == 2)
+        {
+            dot[0] = 1.15;
+            dot[1] = 0.75;
+            dots.push_back(dot);
+            dot[0] = 0.85;
+            dot[1] = 0.75;
+            dots.push_back(dot);
+        }
         createWay(sectors[i]);
     }
     visualization_msgs::Marker line_list, points_list;
@@ -496,6 +541,15 @@ void    dotting::startdotting()
         p.y = (*i)[1];
         points_list.points.push_back(p);
     }
+
+    for (auto j = dots.begin(); j != dots.end(); j++)
+    {
+        msg.x = (*j)[0];
+        msg.x = (*j)[1];
+        arr.vec.push_back(msg);
+        std::cout << *j << std::endl;
+    }
+    pubdots.publish(arr);
 
     while (true)
     {

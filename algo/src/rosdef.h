@@ -25,6 +25,7 @@
 #include "algo/vector_msg.h"
 #include "algo/vector_array.h"
 #include <boost/numeric/ublas/vector.hpp>
+#include <boost/numeric/ublas/matrix.hpp>
 #include <boost/numeric/ublas/io.hpp>
 #include <vector>
 #define LENGTH norm_2

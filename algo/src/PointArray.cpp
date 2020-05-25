@@ -37,9 +37,20 @@ void PointArray::PointTransmitter(const algo::vector_msg::ConstPtr &msg)
     {
         pointI++;
         if (points.size() <= pointI)
-            pointI = 0;
+            pointI--;
     }
     pubdest.publish(points[pointI]);
+}
+
+void    PointArray::createArray(const algo::vector_array::ConstPtr &msg)
+{
+    algo::vector_msg v;
+    for (auto j = msg->vec.begin(); j != msg->vec.end(); j++)
+    {
+        v.x = j->x;
+        v.y = j->y;
+        points.push_back(v);
+    }
 }
 
 PointArray::PointArray(ros::NodeHandle *n)
@@ -48,9 +59,10 @@ PointArray::PointArray(ros::NodeHandle *n)
 
     subpos = n->subscribe("position", 0, &PointArray::PointTransmitter, this);
     subpoints = n->subscribe("handpoint", 0, &PointArray::handPoint, this);
+    subdots = n->subscribe("dots", 0, &PointArray::createArray, this);
     pubdest = n->advertise<algo::vector_msg>("destination", 1);
 
-    point.x = 1;
+   /* point.x = 1;
     point.y = 0;
     points.push_back(point);
     point.y = 0.25;
@@ -87,7 +99,7 @@ PointArray::PointArray(ros::NodeHandle *n)
     points.push_back(point);
     point.x = 0;
     point.y = 0;
-    points.push_back(point);
+    points.push_back(point);*/
 
 }
 

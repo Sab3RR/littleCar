@@ -5,7 +5,7 @@
 #ifndef ALGO_DOTTING_H
 #define ALGO_DOTTING_H
 #include "rosdef.h"
-#define WIDTH 0.5f
+#define WIDTH 0.15f
 
 enum corners
 {
@@ -21,6 +21,7 @@ public:
     std::list<vector<double>> dots;
     ros::Publisher  pubdots;
     ros::Publisher marker_pub;
+
     double coorddown = 0.f;
 
     explicit    dotting(ros::NodeHandle *n);

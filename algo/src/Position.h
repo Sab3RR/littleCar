@@ -22,11 +22,11 @@ public:
     ros::Publisher  pubpos;
     ros::Publisher  pubdir;
 
-    vec             pos = {0.f, 0.f};
-    vec             dir = {0.f, 0.f};
-    vec             wheelR;
-    vec             wheelL;
-
+    vec pos = {0.f,0.f};
+    vec  dir = {1.f,0.f};
+    vec  wheelR;
+    vec  wheelL;
+    visualization_msgs::Marker line_list;
     bool inited = false;
 
 

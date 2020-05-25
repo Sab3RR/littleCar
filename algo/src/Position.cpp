@@ -20,6 +20,31 @@ void Position::Rwheel(const algo::Encoder_msg::ConstPtr& msg)
         if (msg->Speed > 0)
             inited = true;
     }
+    /*double angle;
+    double lenght;
+    algo::vector_msg d;
+    matrix<double> m(2,2);
+    vector<double> help(2);
+    vector<double> v(2);
+    matrix<double> vv(2, 1);
+
+    angle = PERTICK / W;
+    help = wheelR - wheelL;
+    v[0] = help[0] * cos(angle) + help[1] * -sin(angle);
+    v[1] = help[0] * sin(angle) + help[1] * cos(angle);
+    help = v;
+    wheelR = wheelL + help;
+    pos = wheelL + (help / 2);
+    d.x = pos[0];
+    d.y = pos[1];
+    pubpos.publish(d);
+    lenght = LENGTH(help);
+    help /= lenght;
+    d.x = -help[1];
+    d.y = help[0];
+    pubdir.publish(d);*/
+
+
 }
 
 void Position::Lwheel(const algo::Encoder_msg::ConstPtr& msg)
@@ -38,6 +63,28 @@ void Position::Lwheel(const algo::Encoder_msg::ConstPtr& msg)
         if (msg->Speed > 0)
             inited = true;
     }
+    /*double angle;
+    double lenght;
+    algo::vector_msg d;
+    matrix<double> m(2,2);
+    vector<double> help(2);
+    vector<double> v(2);
+
+    angle = PERTICK / -W;
+    help = wheelL - wheelR;
+    v[0] = help[0] * cos(angle) + help[1] * -sin(angle);
+    v[1] = help[0] * sin(angle) + help[1] * cos(angle);
+    help = v;
+    wheelL = wheelR + help;
+    pos = wheelR + (help / 2);
+    d.x = pos[0];
+    d.y = pos[1];
+    pubpos.publish(d);
+    lenght = LENGTH(help);
+    help /= lenght;
+    d.x = help[1];
+    d.y = -help[0];
+    pubdir.publish(d);*/
 }
 
 void Position::Compas(const std_msgs::Float64::ConstPtr& msg)
@@ -64,6 +111,8 @@ void Position::Compas(const std_msgs::Float64::ConstPtr& msg)
         pubdir.publish(vec);
 
     }
+
+
 }
 
 
@@ -126,6 +175,24 @@ Position::Position(ros::NodeHandle *n)
     pubpos = n->advertise<algo::vector_msg>("position", 1);
     pubdir = n->advertise<algo::vector_msg>("direction", 1);
     pubAr = n->advertise<std_msgs::Float64MultiArray>("MotorForce", 10);
+    line_list.header.frame_id = "/my_frame";
+    line_list.header.stamp = ros::Time::now();
+    line_list.ns = "points_and_lines";
+    line_list.action = visualization_msgs::Marker::ADD;
+    line_list.pose.orientation.w = 1.0;
+    line_list.id = 1;
+    line_list.type = visualization_msgs::Marker::POINTS;
+
+    /*pos[0] = 0.f;
+    pos[1] = 0.f;
+    dir[0] = 1.f;
+    dir[1] = 0.f;
+    wheelR[0] = dir[1] * W / 2;
+    wheelR[1] = -dir[0] * W / 2;
+
+    wheelL[0] = -dir[1] * W / 2;
+    wheelL[1] = dir[0] * W / 2;*/
+
     sleep(1);
 
 }

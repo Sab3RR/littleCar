@@ -12,6 +12,7 @@ class PointArray {
 public:
     ros::Subscriber subpos;
     ros::Subscriber subpoints;
+    ros::Subscriber subdots;
     ros::Publisher  pubdest;
 
     std::vector<algo::vector_msg> points;
@@ -23,6 +24,7 @@ public:
     explicit PointArray(ros::NodeHandle *n);
     void     PointTransmitter(const algo::vector_msg::ConstPtr& msg);
     void    handPoint(const std_msgs::Float64::ConstPtr &msg);
+    void    createArray(const algo::vector_array::ConstPtr &msg);
 };
 
 
