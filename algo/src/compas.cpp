@@ -16,7 +16,7 @@ void compas::toFloat(const std_msgs::String::ConstPtr& msg)
     std_msgs::Float64 new_msg;
 
      boost::split(arr, msg->data, boost::is_any_of(","));
-     new_msg.data = std::atof(&(arr[0].c_str())[5]);
+     new_msg.data = std::atof((arr[2].c_str()));
      if (calibrated == -1)
      {
          calibrated = new_msg.data;

@@ -32,7 +32,7 @@ void PointArray::PointTransmitter(const algo::vector_msg::ConstPtr &msg)
     if (points.size() == 0)
         return ;
     lenght = sqrtf(pow(msg->x - points[pointI].x, 2) + pow(msg->y - points[pointI].y, 2));
-
+    std::cout << points[pointI] << std::endl;
     if (lenght < 0.05)
     {
         pointI++;

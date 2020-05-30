@@ -27,8 +27,6 @@
       <config projectName="algo" targetName="clean_test_results" />
       <config projectName="algo" targetName="algo_generate_messages_eus" />
       <config projectName="algo" targetName="roscpp_generate_messages_cpp" />
-      <config projectName="algo" targetName="algo_generate_messages_py" />
-      <config projectName="algo" targetName="actionlib_generate_messages_lisp" />
       <config projectName="algo" targetName="sensor_msgs_generate_messages_eus" />
       <config projectName="algo" targetName="geometry_msgs_generate_messages_cpp" />
       <config projectName="algo" targetName="tf2_msgs_generate_messages_cpp" />
@@ -42,8 +40,6 @@
       <config projectName="algo" targetName="roscpp_generate_messages_eus" />
       <config projectName="algo" targetName="tf_generate_messages_nodejs" />
       <config projectName="algo" targetName="algo_genpy" />
-      <config projectName="algo" targetName="gmock" />
-      <config projectName="algo" targetName="actionlib_generate_messages_cpp" />
       <config projectName="algo" targetName="std_msgs_generate_messages_nodejs" />
       <config projectName="algo" targetName="actionlib_msgs_generate_messages_cpp" />
       <config projectName="algo" targetName="std_msgs_generate_messages_cpp" />
@@ -56,26 +52,30 @@
       <config projectName="algo" targetName="sensor_msgs_generate_messages_cpp" />
       <config projectName="algo" targetName="tf_generate_messages_lisp" />
       <config projectName="algo" targetName="tf2_msgs_generate_messages_nodejs" />
+      <config projectName="algo" targetName="tf_generate_messages_cpp" />
       <config projectName="algo" targetName="visualization_msgs_generate_messages_lisp" />
+      <config projectName="algo" targetName="visualization_msgs_generate_messages_py" />
       <config projectName="algo" targetName="run_tests" />
       <config projectName="algo" targetName="geometry_msgs_generate_messages_nodejs" />
+      <config projectName="algo" targetName="sensor_msgs_generate_messages_py" />
       <config projectName="algo" targetName="geometry_msgs_generate_messages_lisp" />
       <config projectName="algo" targetName="actionlib_msgs_generate_messages_eus" />
       <config projectName="algo" targetName="std_msgs_generate_messages_eus" />
-      <config projectName="algo" targetName="algo_gennodejs" />
+      <config projectName="algo" targetName="tf2_msgs_generate_messages_lisp" />
       <config projectName="algo" targetName="visualization_msgs_generate_messages_cpp" />
       <config projectName="algo" targetName="points" />
       <config projectName="algo" targetName="algo_generate_messages_nodejs" />
-      <config projectName="algo" targetName="tf_generate_messages_cpp" />
+      <config projectName="algo" targetName="algo_generate_messages_py" />
       <config projectName="algo" targetName="_algo_generate_messages_check_deps_vector_array" />
       <config projectName="algo" targetName="roscpp_generate_messages_nodejs" />
       <config projectName="algo" targetName="client" />
       <config projectName="algo" targetName="dotting" />
       <config projectName="algo" targetName="rosgraph_msgs_generate_messages_nodejs" />
-      <config projectName="algo" targetName="visualization_msgs_generate_messages_py" />
+      <config projectName="algo" targetName="gmock" />
       <config projectName="algo" targetName="roscpp_generate_messages_py" />
       <config projectName="algo" targetName="_algo_generate_messages_check_deps_Encoder_msg" />
       <config projectName="algo" targetName="motor" />
+      <config projectName="algo" targetName="rosgraph_msgs_generate_messages_py" />
       <config projectName="algo" targetName="algo_gencpp" />
       <config projectName="algo" targetName="actionlib_msgs_generate_messages_nodejs" />
       <config projectName="algo" targetName="rosgraph_msgs_generate_messages_cpp" />
@@ -84,9 +84,9 @@
       <config projectName="algo" targetName="rosgraph_msgs_generate_messages_eus" />
       <config projectName="algo" targetName="ComandReciver" />
       <config projectName="algo" targetName="rosgraph_msgs_generate_messages_lisp" />
-      <config projectName="algo" targetName="tf2_msgs_generate_messages_lisp" />
+      <config projectName="algo" targetName="actionlib_generate_messages_cpp" />
       <config projectName="algo" targetName="algo_genlisp" />
-      <config projectName="algo" targetName="sensor_msgs_generate_messages_py" />
+      <config projectName="algo" targetName="actionlib_generate_messages_lisp" />
       <config projectName="algo" targetName="download_extra_data" />
       <config projectName="algo" targetName="visualization_msgs_generate_messages_eus" />
       <config projectName="algo" targetName="algo_generate_messages_cpp" />
@@ -100,7 +100,7 @@
       <config projectName="algo" targetName="tests" />
       <config projectName="algo" targetName="sensor_msgs_generate_messages_nodejs" />
       <config projectName="algo" targetName="roscpp_generate_messages_lisp" />
-      <config projectName="algo" targetName="rosgraph_msgs_generate_messages_py" />
+      <config projectName="algo" targetName="algo_gennodejs" />
       <config projectName="algo" targetName="algo_geneus" />
     </generated>
   </component>
@@ -112,14 +112,12 @@
   <component name="ChangeListManager">
     <list default="true" id="e0dda52d-ece5-4528-b096-c11cde3ced8c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ComandReceiver.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/ComandReceiver.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PointArray.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/PointArray.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PointArray.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/PointArray.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Position.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Position.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Position.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Position.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/compas.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/compas.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dotting.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/dotting.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dotting.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/dotting.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rosdef.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/rosdef.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/rosdef.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/rosdef.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +151,7 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="CMake Application.dotting">
+  <component name="RunManager" selected="CMake Application.motor">
     <configuration name="ComandReciver" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="ComandReciver" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="algo" RUN_TARGET_NAME="ComandReciver">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -686,7 +684,12 @@
       <workItem from="1590075242612" duration="5088000" />
       <workItem from="1590080358512" duration="4781000" />
       <workItem from="1590262690456" duration="2512000" />
-      <workItem from="1590410476441" duration="6495000" />
+      <workItem from="1590410476441" duration="6524000" />
+      <workItem from="1590510395716" duration="1193000" />
+      <workItem from="1590598772608" duration="8255000" />
+      <workItem from="1590607681583" duration="22000" />
+      <workItem from="1590678745187" duration="1904000" />
+      <workItem from="1590840828318" duration="2868000" />
     </task>
     <task id="LOCAL-00001" summary="objects intersecton">
       <created>1588605796901</created>
@@ -716,7 +719,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589821305154</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="viz">
+      <created>1590416978454</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1590416978454</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -754,21 +764,22 @@
     <MESSAGE value="objects intersecton" />
     <MESSAGE value="dotting added" />
     <MESSAGE value="dotting algo" />
-    <option name="LAST_COMMIT_MESSAGE" value="dotting algo" />
+    <MESSAGE value="viz" />
+    <option name="LAST_COMMIT_MESSAGE" value="viz" />
   </component>
   <component name="WindowStateProjectService">
     <state x="971" y="442" width="927" height="341" key="#com.intellij.structuralsearch.plugin.ui.StructuralSearchDialog" timestamp="1589638302970">
       <screen x="0" y="27" width="1920" height="1173" />
     </state>
     <state x="971" y="442" width="927" height="341" key="#com.intellij.structuralsearch.plugin.ui.StructuralSearchDialog/0.27.1920.1173@0.27.1920.1173" timestamp="1589638302970" />
-    <state x="1318" y="486" width="484" height="493" key="#xdebugger.evaluate" timestamp="1590412090581">
+    <state x="1155" y="628" width="484" height="493" key="#xdebugger.evaluate" timestamp="1590599875926">
       <screen x="0" y="27" width="1920" height="1173" />
     </state>
-    <state x="1318" y="486" width="484" height="493" key="#xdebugger.evaluate/0.27.1920.1173@0.27.1920.1173" timestamp="1590412090581" />
-    <state x="860" y="268" width="912" height="847" key="CommitChangelistDialog2" timestamp="1589821305087">
+    <state x="1155" y="628" width="484" height="493" key="#xdebugger.evaluate/0.27.1920.1173@0.27.1920.1173" timestamp="1590599875926" />
+    <state x="860" y="268" width="912" height="847" key="CommitChangelistDialog2" timestamp="1590416978377">
       <screen x="0" y="27" width="1920" height="1173" />
     </state>
-    <state x="860" y="268" width="912" height="847" key="CommitChangelistDialog2/0.27.1920.1173@0.27.1920.1173" timestamp="1589821305087" />
+    <state x="860" y="268" width="912" height="847" key="CommitChangelistDialog2/0.27.1920.1173@0.27.1920.1173" timestamp="1590416978377" />
     <state width="555" height="506" key="DebuggerActiveHint" timestamp="1589579801749">
       <screen x="0" y="27" width="1920" height="1173" />
     </state>
@@ -782,46 +793,46 @@
     </state>
     <state x="483" y="353" width="424" height="484" key="FileChooserDialogImpl/0.27.1920.1130@0.27.1920.1130" timestamp="1584463054729" />
     <state x="483" y="365" width="424" height="484" key="FileChooserDialogImpl/0.27.1920.1173@0.27.1920.1173" timestamp="1589581954782" />
-    <state width="1874" height="317" key="GridCell.Tab.0.bottom" timestamp="1590412510024">
+    <state width="1874" height="317" key="GridCell.Tab.0.bottom" timestamp="1590843054391">
       <screen x="0" y="27" width="1920" height="1173" />
     </state>
-    <state width="1874" height="317" key="GridCell.Tab.0.bottom/0.27.1920.1173@0.27.1920.1173" timestamp="1590412510024" />
-    <state width="1874" height="317" key="GridCell.Tab.0.center" timestamp="1590412510024">
+    <state width="1874" height="317" key="GridCell.Tab.0.bottom/0.27.1920.1173@0.27.1920.1173" timestamp="1590843054391" />
+    <state width="1874" height="317" key="GridCell.Tab.0.center" timestamp="1590843054391">
       <screen x="0" y="27" width="1920" height="1173" />
     </state>
-    <state width="1874" height="317" key="GridCell.Tab.0.center/0.27.1920.1173@0.27.1920.1173" timestamp="1590412510024" />
-    <state width="1874" height="317" key="GridCell.Tab.0.left" timestamp="1590412510024">
+    <state width="1874" height="317" key="GridCell.Tab.0.center/0.27.1920.1173@0.27.1920.1173" timestamp="1590843054391" />
+    <state width="1874" height="317" key="GridCell.Tab.0.left" timestamp="1590843054391">
       <screen x="0" y="27" width="1920" height="1173" />
     </state>
-    <state width="1874" height="317" key="GridCell.Tab.0.left/0.27.1920.1173@0.27.1920.1173" timestamp="1590412510024" />
-    <state width="1874" height="317" key="GridCell.Tab.0.right" timestamp="1590412510024">
+    <state width="1874" height="317" key="GridCell.Tab.0.left/0.27.1920.1173@0.27.1920.1173" timestamp="1590843054391" />
+    <state width="1874" height="317" key="GridCell.Tab.0.right" timestamp="1590843054391">
       <screen x="0" y="27" width="1920" height="1173" />
     </state>
-    <state width="1874" height="317" key="GridCell.Tab.0.right/0.27.1920.1173@0.27.1920.1173" timestamp="1590412510024" />
-    <state width="1874" height="430" key="GridCell.Tab.1.bottom" timestamp="1590412117144">
+    <state width="1874" height="317" key="GridCell.Tab.0.right/0.27.1920.1173@0.27.1920.1173" timestamp="1590843054391" />
+    <state width="1874" height="430" key="GridCell.Tab.1.bottom" timestamp="1590603557913">
       <screen x="0" y="27" width="1920" height="1173" />
     </state>
-    <state width="1874" height="430" key="GridCell.Tab.1.bottom/0.27.1920.1173@0.27.1920.1173" timestamp="1590412117144" />
-    <state width="1874" height="430" key="GridCell.Tab.1.center" timestamp="1590412117144">
+    <state width="1874" height="430" key="GridCell.Tab.1.bottom/0.27.1920.1173@0.27.1920.1173" timestamp="1590603557913" />
+    <state width="1874" height="430" key="GridCell.Tab.1.center" timestamp="1590603557913">
       <screen x="0" y="27" width="1920" height="1173" />
     </state>
-    <state width="1874" height="430" key="GridCell.Tab.1.center/0.27.1920.1173@0.27.1920.1173" timestamp="1590412117144" />
-    <state width="1874" height="430" key="GridCell.Tab.1.left" timestamp="1590412117144">
+    <state width="1874" height="430" key="GridCell.Tab.1.center/0.27.1920.1173@0.27.1920.1173" timestamp="1590603557913" />
+    <state width="1874" height="430" key="GridCell.Tab.1.left" timestamp="1590603557913">
       <screen x="0" y="27" width="1920" height="1173" />
     </state>
-    <state width="1874" height="430" key="GridCell.Tab.1.left/0.27.1920.1173@0.27.1920.1173" timestamp="1590412117144" />
-    <state width="1874" height="430" key="GridCell.Tab.1.right" timestamp="1590412117144">
+    <state width="1874" height="430" key="GridCell.Tab.1.left/0.27.1920.1173@0.27.1920.1173" timestamp="1590603557913" />
+    <state width="1874" height="430" key="GridCell.Tab.1.right" timestamp="1590603557913">
       <screen x="0" y="27" width="1920" height="1173" />
     </state>
-    <state width="1874" height="430" key="GridCell.Tab.1.right/0.27.1920.1173@0.27.1920.1173" timestamp="1590412117144" />
+    <state width="1874" height="430" key="GridCell.Tab.1.right/0.27.1920.1173@0.27.1920.1173" timestamp="1590603557913" />
     <state x="898" y="248" key="SettingsEditor" timestamp="1589817754797">
       <screen x="0" y="27" width="1920" height="1173" />
     </state>
     <state x="898" y="248" key="SettingsEditor/0.27.1920.1173@0.27.1920.1173" timestamp="1589817754797" />
-    <state x="555" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1589821320528">
+    <state x="555" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1590416990611">
       <screen x="0" y="27" width="1920" height="1173" />
     </state>
-    <state x="555" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2/0.27.1920.1173@0.27.1920.1173" timestamp="1589821320528" />
+    <state x="555" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2/0.27.1920.1173@0.27.1920.1173" timestamp="1590416990611" />
     <state x="616" y="440" key="com.intellij.ide.util.TipDialog" timestamp="1589130755163">
       <screen x="0" y="27" width="1920" height="1173" />
     </state>
@@ -830,9 +841,20 @@
       <screen x="0" y="27" width="1920" height="1173" />
     </state>
     <state x="624" y="283" key="run.anything.popup/0.27.1920.1173@0.27.1920.1173" timestamp="1589289694768" />
-    <state x="623" y="287" width="672" height="678" key="search.everywhere.popup" timestamp="1589821316915">
+    <state x="623" y="287" width="672" height="678" key="search.everywhere.popup" timestamp="1590416989125">
       <screen x="0" y="27" width="1920" height="1173" />
     </state>
-    <state x="623" y="287" width="672" height="678" key="search.everywhere.popup/0.27.1920.1173@0.27.1920.1173" timestamp="1589821316915" />
+    <state x="623" y="287" width="672" height="678" key="search.everywhere.popup/0.27.1920.1173@0.27.1920.1173" timestamp="1590416989125" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/PointArray.cpp</url>
+          <line>47</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -545,16 +545,18 @@ void    dotting::startdotting()
     for (auto j = dots.begin(); j != dots.end(); j++)
     {
         msg.x = (*j)[0];
-        msg.x = (*j)[1];
+        msg.y = (*j)[1];
         arr.vec.push_back(msg);
         std::cout << *j << std::endl;
     }
+    sleep(1);
     pubdots.publish(arr);
 
     while (true)
     {
         marker_pub.publish(line_list);
         marker_pub.publish(points_list);
+        sleep(1);
     }
 
 }

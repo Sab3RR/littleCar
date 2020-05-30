@@ -7,7 +7,7 @@
 
 #include "rosdef.h"
 #include "cmath"
-#define W 0.135f
+#define W 0.134f
 #define D 0.065f
 #define TICK 20
 #define PERTICK 0.010205f
@@ -21,12 +21,15 @@ public:
     ros::Publisher  pubAr;
     ros::Publisher  pubpos;
     ros::Publisher  pubdir;
+    ros::Publisher marker_pub;
 
     vec pos = {0.f,0.f};
-    vec  dir = {1.f,0.f};
+    vec  dir = {0.f,0.f};
     vec  wheelR;
     vec  wheelL;
     visualization_msgs::Marker line_list;
+    visualization_msgs::Marker arrow;
+
     bool inited = false;
 
 

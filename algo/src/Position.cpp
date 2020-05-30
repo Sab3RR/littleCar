@@ -14,6 +14,11 @@ void Position::Rwheel(const algo::Encoder_msg::ConstPtr& msg)
         pos = {(wheelL.x - wheelR.x) / 2 + wheelR.x, (wheelL.y - wheelR.y) / 2 + wheelR.y};
         vec.x = pos.x;
         vec.y = pos.y;
+       /* line_list.points[0].x = wheelR.x;
+        line_list.points[0].y = wheelR.y;*/
+        line_list.points[1].x = pos.x;
+        line_list.points[1].y = pos.y;
+        marker_pub.publish(line_list);
         pubpos.publish(vec);
     } else
     {
@@ -57,6 +62,11 @@ void Position::Lwheel(const algo::Encoder_msg::ConstPtr& msg)
         pos = {(wheelR.x - wheelL.x) / 2 + wheelL.x, (wheelR.y - wheelL.y) / 2 + wheelL.y};
         vec.x = pos.x;
         vec.y = pos.y;
+        /*line_list.points[2].x = wheelL.x;
+        line_list.points[2].y = wheelL.y;*/
+        line_list.points[1].x = pos.x;
+        line_list.points[1].y = pos.y;
+        marker_pub.publish(line_list);
         pubpos.publish(vec);
     } else
     {
@@ -65,7 +75,8 @@ void Position::Lwheel(const algo::Encoder_msg::ConstPtr& msg)
     }
     /*double angle;
     double lenght;
-    algo::vector_msg d;
+    algo::vector_msg d;        line_list.points[0].x = vec.x;
+
     matrix<double> m(2,2);
     vector<double> help(2);
     vector<double> v(2);
@@ -100,14 +111,21 @@ void Position::Compas(const std_msgs::Float64::ConstPtr& msg)
         vec.x = dir.x;
         vec.y = dir.y;
         pubdir.publish(vec);
-        wheelR = {static_cast<float>(dir.y * W / 2), static_cast<float>(-dir.x * W / 2)};
-        wheelL = {static_cast<float>(-dir.y * W / 2), static_cast<float>(dir.x * W / 2)};
+        wheelR = {static_cast<float>(-dir.y * W / 2), static_cast<float>(dir.x * W / 2)};
+        wheelL = {static_cast<float>(dir.y * W / 2), static_cast<float>(-dir.x * W / 2)};
     } else
     {
         dir.x = cosf(rad);
         dir.y = sinf(rad);
         vec.x = dir.x;
         vec.y = dir.y;
+        arrow.points[0].x = pos.x;
+        arrow.points[0].y = pos.y;
+        arrow.points[1].x = pos.x + (dir.x * 0.5);
+        arrow.points[1].y = pos.y + (dir.y * 0.5);
+
+        marker_pub.publish(arrow);
+        marker_pub.publish(line_list);
         pubdir.publish(vec);
 
     }
@@ -172,6 +190,7 @@ Position::Position(ros::NodeHandle *n)
     subR = n->subscribe("SpeedAndWayR", 0, &Position::Rwheel, this);
     subL = n->subscribe("SpeedAndWayL", 0, &Position::Lwheel, this);
     subC = n->subscribe("Fcompas", 1, &Position::Compas, this);
+    marker_pub = n->advertise<visualization_msgs::Marker>("visualization_marker", 10);
     pubpos = n->advertise<algo::vector_msg>("position", 1);
     pubdir = n->advertise<algo::vector_msg>("direction", 1);
     pubAr = n->advertise<std_msgs::Float64MultiArray>("MotorForce", 10);
@@ -180,8 +199,33 @@ Position::Position(ros::NodeHandle *n)
     line_list.ns = "points_and_lines";
     line_list.action = visualization_msgs::Marker::ADD;
     line_list.pose.orientation.w = 1.0;
-    line_list.id = 1;
+    line_list.id = 2;
     line_list.type = visualization_msgs::Marker::POINTS;
+    line_list.scale.x = 0.05;
+    line_list.scale.y = 0.05;
+    line_list.color.a = 1.0;
+    line_list.color.r = 1.0;
+    arrow.header.frame_id = "/my_frame";
+    arrow.header.stamp = ros::Time::now();
+    arrow.ns = "points_and_lines";
+    arrow.action = visualization_msgs::Marker::ADD;
+    arrow.pose.orientation.w = 1.0;
+    arrow.id = 3;
+    arrow.type = visualization_msgs::Marker::ARROW;
+    arrow.scale.x = 0.1;
+    arrow.scale.y = 0.1;
+    arrow.color.a = 1.0;
+    arrow.color.r = 1.0;
+    geometry_msgs::Point p;
+    p.z = 0;
+    p.x = 0;
+    p.y = 0;
+    line_list.points.push_back(p);
+    line_list.points.push_back(p);
+    line_list.points.push_back(p);
+    arrow.points.push_back(p);
+    arrow.points.push_back(p);
+
 
     /*pos[0] = 0.f;
     pos[1] = 0.f;
