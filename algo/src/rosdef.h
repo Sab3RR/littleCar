@@ -28,6 +28,7 @@
 #include <boost/numeric/ublas/matrix.hpp>
 #include <boost/numeric/ublas/io.hpp>
 #include <vector>
+#include <termios.h>
 #define LENGTH norm_2
 using namespace boost::numeric::ublas;
 struct vec

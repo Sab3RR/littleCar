@@ -7,7 +7,7 @@
 
 #include "rosdef.h"
 #include "cmath"
-#define W 0.134f
+#define W 0.135f
 #define D 0.065f
 #define TICK 20
 #define PERTICK 0.010205f

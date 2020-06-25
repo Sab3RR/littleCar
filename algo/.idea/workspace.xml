@@ -20,88 +20,89 @@
   </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="algo" targetName="tf2_msgs_generate_messages_py" />
-      <config projectName="algo" targetName="actionlib_generate_messages_nodejs" />
-      <config projectName="algo" targetName="tf_generate_messages_eus" />
-      <config projectName="algo" targetName="actionlib_generate_messages_eus" />
-      <config projectName="algo" targetName="clean_test_results" />
-      <config projectName="algo" targetName="algo_generate_messages_eus" />
-      <config projectName="algo" targetName="roscpp_generate_messages_cpp" />
-      <config projectName="algo" targetName="sensor_msgs_generate_messages_eus" />
-      <config projectName="algo" targetName="geometry_msgs_generate_messages_cpp" />
-      <config projectName="algo" targetName="tf2_msgs_generate_messages_cpp" />
-      <config projectName="algo" targetName="gtest" />
-      <config projectName="algo" targetName="gmock_main" />
-      <config projectName="algo" targetName="doxygen" />
-      <config projectName="algo" targetName="_algo_generate_messages_check_deps_vector_msg" />
-      <config projectName="algo" targetName="algo_generate_messages" />
-      <config projectName="algo" targetName="actionlib_generate_messages_py" />
-      <config projectName="algo" targetName="server" />
-      <config projectName="algo" targetName="roscpp_generate_messages_eus" />
       <config projectName="algo" targetName="tf_generate_messages_nodejs" />
-      <config projectName="algo" targetName="algo_genpy" />
-      <config projectName="algo" targetName="std_msgs_generate_messages_nodejs" />
-      <config projectName="algo" targetName="actionlib_msgs_generate_messages_cpp" />
-      <config projectName="algo" targetName="std_msgs_generate_messages_cpp" />
+      <config projectName="algo" targetName="algo_gencpp" />
+      <config projectName="algo" targetName="points" />
+      <config projectName="algo" targetName="std_msgs_generate_messages_lisp" />
+      <config projectName="algo" targetName="actionlib_generate_messages_lisp" />
+      <config projectName="algo" targetName="tf2_msgs_generate_messages_nodejs" />
+      <config projectName="algo" targetName="geometry_msgs_generate_messages_nodejs" />
+      <config projectName="algo" targetName="roscpp_generate_messages_cpp" />
+      <config projectName="algo" targetName="actionlib_msgs_generate_messages_eus" />
+      <config projectName="algo" targetName="_algo_generate_messages_check_deps_vector_msg" />
+      <config projectName="algo" targetName="tf_generate_messages_cpp" />
+      <config projectName="algo" targetName="actionlib_generate_messages_eus" />
+      <config projectName="algo" targetName="tf_generate_messages_lisp" />
       <config projectName="algo" targetName="algo_generate_messages_lisp" />
+      <config projectName="algo" targetName="gmock" />
+      <config projectName="algo" targetName="rosgraph_msgs_generate_messages_nodejs" />
+      <config projectName="algo" targetName="_algo_generate_messages_check_deps_vector_array" />
+      <config projectName="algo" targetName="tf_generate_messages_py" />
+      <config projectName="algo" targetName="visualization_msgs_generate_messages_py" />
+      <config projectName="algo" targetName="rosgraph_msgs_generate_messages_eus" />
+      <config projectName="algo" targetName="roscpp_generate_messages_lisp" />
+      <config projectName="algo" targetName="std_msgs_generate_messages_cpp" />
+      <config projectName="algo" targetName="algo_geneus" />
+      <config projectName="algo" targetName="visualization_msgs_generate_messages_lisp" />
+      <config projectName="algo" targetName="doxygen" />
+      <config projectName="algo" targetName="ComandReciver" />
+      <config projectName="algo" targetName="position" />
+      <config projectName="algo" targetName="sensor_msgs_generate_messages_nodejs" />
+      <config projectName="algo" targetName="roscpp_generate_messages_eus" />
+      <config projectName="algo" targetName="actionlib_msgs_generate_messages_cpp" />
+      <config projectName="algo" targetName="geometry_msgs_generate_messages_lisp" />
+      <config projectName="algo" targetName="download_extra_data" />
+      <config projectName="algo" targetName="rosgraph_msgs_generate_messages_lisp" />
+      <config projectName="algo" targetName="sensor_msgs_generate_messages_py" />
+      <config projectName="algo" targetName="sensor_msgs_generate_messages_eus" />
+      <config projectName="algo" targetName="actionlib_generate_messages_cpp" />
+      <config projectName="algo" targetName="tests" />
+      <config projectName="algo" targetName="tf2_msgs_generate_messages_cpp" />
+      <config projectName="algo" targetName="algo_gennodejs" />
       <config projectName="algo" targetName="geometry_msgs_generate_messages_py" />
+      <config projectName="algo" targetName="gmock_main" />
+      <config projectName="algo" targetName="rosgraph_msgs_generate_messages_cpp" />
+      <config projectName="algo" targetName="dotting" />
+      <config projectName="algo" targetName="motor" />
+      <config projectName="algo" targetName="std_msgs_generate_messages_eus" />
+      <config projectName="algo" targetName="_algo_generate_messages_check_deps_Encoder_msg" />
+      <config projectName="algo" targetName="client" />
+      <config projectName="algo" targetName="compas" />
+      <config projectName="algo" targetName="actionlib_msgs_generate_messages_lisp" />
+      <config projectName="algo" targetName="visualization_msgs_generate_messages_eus" />
+      <config projectName="algo" targetName="actionlib_generate_messages_py" />
+      <config projectName="algo" targetName="actionlib_generate_messages_nodejs" />
+      <config projectName="algo" targetName="algo_generate_messages_nodejs" />
+      <config projectName="algo" targetName="mancontroll" />
+      <config projectName="algo" targetName="algo_generate_messages" />
+      <config projectName="algo" targetName="algo_generate_messages_cpp" />
+      <config projectName="algo" targetName="algo_genlisp" />
+      <config projectName="algo" targetName="sensor_msgs_generate_messages_cpp" />
       <config projectName="algo" targetName="std_msgs_generate_messages_py" />
+      <config projectName="algo" targetName="roscpp_generate_messages_nodejs" />
       <config projectName="algo" targetName="geometry_msgs_generate_messages_eus" />
       <config projectName="algo" targetName="tf2_msgs_generate_messages_eus" />
-      <config projectName="algo" targetName="visualization_msgs_generate_messages_nodejs" />
-      <config projectName="algo" targetName="sensor_msgs_generate_messages_cpp" />
-      <config projectName="algo" targetName="tf_generate_messages_lisp" />
-      <config projectName="algo" targetName="tf2_msgs_generate_messages_nodejs" />
-      <config projectName="algo" targetName="tf_generate_messages_cpp" />
-      <config projectName="algo" targetName="visualization_msgs_generate_messages_lisp" />
-      <config projectName="algo" targetName="visualization_msgs_generate_messages_py" />
-      <config projectName="algo" targetName="run_tests" />
-      <config projectName="algo" targetName="geometry_msgs_generate_messages_nodejs" />
-      <config projectName="algo" targetName="sensor_msgs_generate_messages_py" />
-      <config projectName="algo" targetName="geometry_msgs_generate_messages_lisp" />
-      <config projectName="algo" targetName="actionlib_msgs_generate_messages_eus" />
-      <config projectName="algo" targetName="std_msgs_generate_messages_eus" />
-      <config projectName="algo" targetName="tf2_msgs_generate_messages_lisp" />
+      <config projectName="algo" targetName="algo_genpy" />
+      <config projectName="algo" targetName="server" />
+      <config projectName="algo" targetName="clean_test_results" />
       <config projectName="algo" targetName="visualization_msgs_generate_messages_cpp" />
-      <config projectName="algo" targetName="points" />
-      <config projectName="algo" targetName="algo_generate_messages_nodejs" />
-      <config projectName="algo" targetName="algo_generate_messages_py" />
-      <config projectName="algo" targetName="_algo_generate_messages_check_deps_vector_array" />
-      <config projectName="algo" targetName="roscpp_generate_messages_nodejs" />
-      <config projectName="algo" targetName="client" />
-      <config projectName="algo" targetName="dotting" />
-      <config projectName="algo" targetName="rosgraph_msgs_generate_messages_nodejs" />
-      <config projectName="algo" targetName="gmock" />
-      <config projectName="algo" targetName="roscpp_generate_messages_py" />
-      <config projectName="algo" targetName="_algo_generate_messages_check_deps_Encoder_msg" />
-      <config projectName="algo" targetName="motor" />
-      <config projectName="algo" targetName="rosgraph_msgs_generate_messages_py" />
-      <config projectName="algo" targetName="algo_gencpp" />
-      <config projectName="algo" targetName="actionlib_msgs_generate_messages_nodejs" />
-      <config projectName="algo" targetName="rosgraph_msgs_generate_messages_cpp" />
-      <config projectName="algo" targetName="std_msgs_generate_messages_lisp" />
-      <config projectName="algo" targetName="actionlib_msgs_generate_messages_lisp" />
-      <config projectName="algo" targetName="rosgraph_msgs_generate_messages_eus" />
-      <config projectName="algo" targetName="ComandReciver" />
-      <config projectName="algo" targetName="rosgraph_msgs_generate_messages_lisp" />
-      <config projectName="algo" targetName="actionlib_generate_messages_cpp" />
-      <config projectName="algo" targetName="algo_genlisp" />
-      <config projectName="algo" targetName="actionlib_generate_messages_lisp" />
-      <config projectName="algo" targetName="download_extra_data" />
-      <config projectName="algo" targetName="visualization_msgs_generate_messages_eus" />
-      <config projectName="algo" targetName="algo_generate_messages_cpp" />
+      <config projectName="algo" targetName="gtest" />
+      <config projectName="algo" targetName="algo_generate_messages_eus" />
+      <config projectName="algo" targetName="tf_generate_messages_eus" />
+      <config projectName="algo" targetName="run_tests" />
       <config projectName="algo" targetName="actionlib_msgs_generate_messages_py" />
-      <config projectName="algo" targetName="sensor_msgs_generate_messages_lisp" />
-      <config projectName="algo" targetName="position" />
+      <config projectName="algo" targetName="rosgraph_msgs_generate_messages_py" />
+      <config projectName="algo" targetName="roscpp_generate_messages_py" />
+      <config projectName="algo" targetName="actionlib_msgs_generate_messages_nodejs" />
+      <config projectName="algo" targetName="geometry_msgs_generate_messages_cpp" />
+      <config projectName="algo" targetName="visualization_msgs_generate_messages_nodejs" />
       <config projectName="algo" targetName="gtest_main" />
-      <config projectName="algo" targetName="compas" />
-      <config projectName="algo" targetName="tf_generate_messages_py" />
+      <config projectName="algo" targetName="std_msgs_generate_messages_nodejs" />
+      <config projectName="algo" targetName="sensor_msgs_generate_messages_lisp" />
       <config projectName="algo" targetName="main" />
-      <config projectName="algo" targetName="tests" />
-      <config projectName="algo" targetName="sensor_msgs_generate_messages_nodejs" />
-      <config projectName="algo" targetName="roscpp_generate_messages_lisp" />
-      <config projectName="algo" targetName="algo_gennodejs" />
-      <config projectName="algo" targetName="algo_geneus" />
+      <config projectName="algo" targetName="tf2_msgs_generate_messages_py" />
+      <config projectName="algo" targetName="algo_generate_messages_py" />
+      <config projectName="algo" targetName="tf2_msgs_generate_messages_lisp" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -111,13 +112,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e0dda52d-ece5-4528-b096-c11cde3ced8c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/ManControll.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ManControll.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ComandReceiver.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/ComandReceiver.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PointArray.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/PointArray.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Position.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Position.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Position.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/Position.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/compas.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/compas.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dotting.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/dotting.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rosdef.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/rosdef.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +142,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/CLionProjects/untitled1/CMakeLists.txt" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/CMakeLists.txt" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="dynamic.analysis.tools.valgrind" />
   </component>
@@ -151,7 +151,7 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="CMake Application.motor">
+  <component name="RunManager" selected="CMake Application.mancontroll">
     <configuration name="ComandReciver" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="ComandReciver" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="algo" RUN_TARGET_NAME="ComandReciver">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -353,6 +353,11 @@
       </method>
     </configuration>
     <configuration name="main" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="main" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="algo" RUN_TARGET_NAME="main">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="mancontroll" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="algo" TARGET_NAME="mancontroll" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="algo" RUN_TARGET_NAME="mancontroll">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -604,6 +609,7 @@
       <item itemvalue="CMake Application.gtest" />
       <item itemvalue="CMake Application.gtest_main" />
       <item itemvalue="CMake Application.main" />
+      <item itemvalue="CMake Application.mancontroll" />
       <item itemvalue="CMake Application.motor" />
       <item itemvalue="CMake Application.points" />
       <item itemvalue="CMake Application.position" />
@@ -689,7 +695,10 @@
       <workItem from="1590598772608" duration="8255000" />
       <workItem from="1590607681583" duration="22000" />
       <workItem from="1590678745187" duration="1904000" />
-      <workItem from="1590840828318" duration="2868000" />
+      <workItem from="1590840828318" duration="2890000" />
+      <workItem from="1591451443814" duration="2000" />
+      <workItem from="1591451477495" duration="14000" />
+      <workItem from="1592832688207" duration="4867000" />
     </task>
     <task id="LOCAL-00001" summary="objects intersecton">
       <created>1588605796901</created>
@@ -726,7 +735,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590416978454</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="viz">
+      <created>1590845291290</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1590845291290</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -776,10 +792,10 @@
       <screen x="0" y="27" width="1920" height="1173" />
     </state>
     <state x="1155" y="628" width="484" height="493" key="#xdebugger.evaluate/0.27.1920.1173@0.27.1920.1173" timestamp="1590599875926" />
-    <state x="860" y="268" width="912" height="847" key="CommitChangelistDialog2" timestamp="1590416978377">
+    <state x="860" y="268" width="912" height="847" key="CommitChangelistDialog2" timestamp="1590845291208">
       <screen x="0" y="27" width="1920" height="1173" />
     </state>
-    <state x="860" y="268" width="912" height="847" key="CommitChangelistDialog2/0.27.1920.1173@0.27.1920.1173" timestamp="1590416978377" />
+    <state x="860" y="268" width="912" height="847" key="CommitChangelistDialog2/0.27.1920.1173@0.27.1920.1173" timestamp="1590845291208" />
     <state width="555" height="506" key="DebuggerActiveHint" timestamp="1589579801749">
       <screen x="0" y="27" width="1920" height="1173" />
     </state>
@@ -793,22 +809,22 @@
     </state>
     <state x="483" y="353" width="424" height="484" key="FileChooserDialogImpl/0.27.1920.1130@0.27.1920.1130" timestamp="1584463054729" />
     <state x="483" y="365" width="424" height="484" key="FileChooserDialogImpl/0.27.1920.1173@0.27.1920.1173" timestamp="1589581954782" />
-    <state width="1874" height="317" key="GridCell.Tab.0.bottom" timestamp="1590843054391">
+    <state width="1874" height="251" key="GridCell.Tab.0.bottom" timestamp="1592844514318">
       <screen x="0" y="27" width="1920" height="1173" />
     </state>
-    <state width="1874" height="317" key="GridCell.Tab.0.bottom/0.27.1920.1173@0.27.1920.1173" timestamp="1590843054391" />
-    <state width="1874" height="317" key="GridCell.Tab.0.center" timestamp="1590843054391">
+    <state width="1874" height="251" key="GridCell.Tab.0.bottom/0.27.1920.1173@0.27.1920.1173" timestamp="1592844514318" />
+    <state width="1874" height="251" key="GridCell.Tab.0.center" timestamp="1592844514318">
       <screen x="0" y="27" width="1920" height="1173" />
     </state>
-    <state width="1874" height="317" key="GridCell.Tab.0.center/0.27.1920.1173@0.27.1920.1173" timestamp="1590843054391" />
-    <state width="1874" height="317" key="GridCell.Tab.0.left" timestamp="1590843054391">
+    <state width="1874" height="251" key="GridCell.Tab.0.center/0.27.1920.1173@0.27.1920.1173" timestamp="1592844514318" />
+    <state width="1874" height="251" key="GridCell.Tab.0.left" timestamp="1592844514318">
       <screen x="0" y="27" width="1920" height="1173" />
     </state>
-    <state width="1874" height="317" key="GridCell.Tab.0.left/0.27.1920.1173@0.27.1920.1173" timestamp="1590843054391" />
-    <state width="1874" height="317" key="GridCell.Tab.0.right" timestamp="1590843054391">
+    <state width="1874" height="251" key="GridCell.Tab.0.left/0.27.1920.1173@0.27.1920.1173" timestamp="1592844514318" />
+    <state width="1874" height="251" key="GridCell.Tab.0.right" timestamp="1592844514318">
       <screen x="0" y="27" width="1920" height="1173" />
     </state>
-    <state width="1874" height="317" key="GridCell.Tab.0.right/0.27.1920.1173@0.27.1920.1173" timestamp="1590843054391" />
+    <state width="1874" height="251" key="GridCell.Tab.0.right/0.27.1920.1173@0.27.1920.1173" timestamp="1592844514318" />
     <state width="1874" height="430" key="GridCell.Tab.1.bottom" timestamp="1590603557913">
       <screen x="0" y="27" width="1920" height="1173" />
     </state>
@@ -829,10 +845,10 @@
       <screen x="0" y="27" width="1920" height="1173" />
     </state>
     <state x="898" y="248" key="SettingsEditor/0.27.1920.1173@0.27.1920.1173" timestamp="1589817754797" />
-    <state x="555" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1590416990611">
+    <state x="555" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1590845298923">
       <screen x="0" y="27" width="1920" height="1173" />
     </state>
-    <state x="555" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2/0.27.1920.1173@0.27.1920.1173" timestamp="1590416990611" />
+    <state x="555" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2/0.27.1920.1173@0.27.1920.1173" timestamp="1590845298923" />
     <state x="616" y="440" key="com.intellij.ide.util.TipDialog" timestamp="1589130755163">
       <screen x="0" y="27" width="1920" height="1173" />
     </state>
@@ -841,10 +857,10 @@
       <screen x="0" y="27" width="1920" height="1173" />
     </state>
     <state x="624" y="283" key="run.anything.popup/0.27.1920.1173@0.27.1920.1173" timestamp="1589289694768" />
-    <state x="623" y="287" width="672" height="678" key="search.everywhere.popup" timestamp="1590416989125">
+    <state x="623" y="287" width="672" height="678" key="search.everywhere.popup" timestamp="1590845297709">
       <screen x="0" y="27" width="1920" height="1173" />
     </state>
-    <state x="623" y="287" width="672" height="678" key="search.everywhere.popup/0.27.1920.1173@0.27.1920.1173" timestamp="1590416989125" />
+    <state x="623" y="287" width="672" height="678" key="search.everywhere.popup/0.27.1920.1173@0.27.1920.1173" timestamp="1590845297709" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -853,6 +869,11 @@
           <url>file://$PROJECT_DIR$/src/PointArray.cpp</url>
           <line>47</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/Position.cpp</url>
+          <line>6</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
