@@ -1,12 +1,16 @@
 #!/usr/bin/env python
 # license removed for brevity
+import null
 import rospy
 import RPi.GPIO as GPIO
 from std_msgs.msg import Int32
 from std_msgs.msg import Float64
+from std_msgs.msg import Float32
 
 ticks = 0
 sign = 1
+time = null
+wheelrate = null
 def callback_from_ros(data):
     global sign
     if data < 0:
@@ -23,15 +27,26 @@ def callback_func():
         ticks = 32768
     else:
         ticks = ticks + 1 * sign
+    global time
+    global wheelrate
+    now = rospy.get_time()
+    wheelrate = 1/(now - time)
+    time = now
+
+
 
 def talker():
     pub = rospy.Publisher('lwheel_ticks', Int32, queue_size=10)
+    pubrate = rospy.Publisher('lwheel_rate', Float32, queue_size=10)
     rospy.init_node('EncoderL', anonymous=True)
     rate = rospy.Rate(10) # 10hz
+    global time
+    time = rospy.get_time()
     rospy.Subscriber("EngineL", Float64, callback_from_ros)
-    GPIO.add_event_detect(7, GPIO.FALLING, callback=callback_func)
+    GPIO.add_event_detect(8, GPIO.FALLING, callback=callback_func)
     while not rospy.is_shutdown():
         pub.publish(ticks)
+        pubrate.publish(pubrate)
         rate.sleep()
 
 

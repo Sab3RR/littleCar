@@ -7,6 +7,8 @@
 #include <ros/ros.h>
 #include <std_msgs/String.h>
 #include <std_msgs/Float64.h>
+#include <std_msgs/Float32.h>
+#include <std_msgs/Int32.h>
 #include <std_msgs/Float64MultiArray.h>
 #include <tf2/LinearMath/Quaternion.h>
 #include <tf2/LinearMath/Vector3.h>

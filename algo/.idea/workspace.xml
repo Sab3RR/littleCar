@@ -112,11 +112,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e0dda52d-ece5-4528-b096-c11cde3ced8c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/scripts/EncoderL.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/EncoderR.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/algo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/algo.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/EncoderL.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/EncoderL.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/EncoderR.py" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/EncoderR.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MotorController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/MotorController.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MotorController.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/MotorController.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/rosdef.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/rosdef.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -706,7 +707,7 @@
       <workItem from="1591451477495" duration="14000" />
       <workItem from="1592832688207" duration="4867000" />
       <workItem from="1593083813957" duration="40000" />
-      <workItem from="1593695870909" duration="2161000" />
+      <workItem from="1593695870909" duration="5293000" />
     </task>
     <task id="LOCAL-00001" summary="objects intersecton">
       <created>1588605796901</created>
@@ -757,7 +758,14 @@
       <option name="project" value="LOCAL" />
       <updated>1593083831891</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="update encoders">
+      <created>1593699486565</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1593699486565</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -797,7 +805,8 @@
     <MESSAGE value="dotting algo" />
     <MESSAGE value="viz" />
     <MESSAGE value="mancontroll" />
-    <option name="LAST_COMMIT_MESSAGE" value="mancontroll" />
+    <MESSAGE value="update encoders" />
+    <option name="LAST_COMMIT_MESSAGE" value="update encoders" />
   </component>
   <component name="WindowStateProjectService">
     <state x="971" y="442" width="927" height="341" key="#com.intellij.structuralsearch.plugin.ui.StructuralSearchDialog" timestamp="1589638302970">
@@ -808,10 +817,10 @@
       <screen x="0" y="27" width="1920" height="1173" />
     </state>
     <state x="1155" y="628" width="484" height="493" key="#xdebugger.evaluate/0.27.1920.1173@0.27.1920.1173" timestamp="1590599875926" />
-    <state x="860" y="268" width="912" height="847" key="CommitChangelistDialog2" timestamp="1593083831800">
+    <state x="860" y="268" width="912" height="847" key="CommitChangelistDialog2" timestamp="1593699486513">
       <screen x="0" y="27" width="1920" height="1173" />
     </state>
-    <state x="860" y="268" width="912" height="847" key="CommitChangelistDialog2/0.27.1920.1173@0.27.1920.1173" timestamp="1593083831800" />
+    <state x="860" y="268" width="912" height="847" key="CommitChangelistDialog2/0.27.1920.1173@0.27.1920.1173" timestamp="1593699486513" />
     <state width="555" height="506" key="DebuggerActiveHint" timestamp="1589579801749">
       <screen x="0" y="27" width="1920" height="1173" />
     </state>
@@ -860,22 +869,22 @@
       <screen x="0" y="27" width="1920" height="1173" />
     </state>
     <state x="898" y="248" key="SettingsEditor/0.27.1920.1173@0.27.1920.1173" timestamp="1593697757857" />
-    <state x="555" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1593083846595">
+    <state x="555" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1593699494453">
       <screen x="0" y="27" width="1920" height="1173" />
     </state>
-    <state x="555" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2/0.27.1920.1173@0.27.1920.1173" timestamp="1593083846595" />
+    <state x="555" y="348" width="800" height="528" key="Vcs.Push.Dialog.v2/0.27.1920.1173@0.27.1920.1173" timestamp="1593699494453" />
     <state x="616" y="440" key="com.intellij.ide.util.TipDialog" timestamp="1589130755163">
       <screen x="0" y="27" width="1920" height="1173" />
     </state>
     <state x="616" y="440" key="com.intellij.ide.util.TipDialog/0.27.1920.1173@0.27.1920.1173" timestamp="1589130755163" />
-    <state x="624" y="283" key="run.anything.popup" timestamp="1589289694768">
+    <state x="624" y="283" key="run.anything.popup" timestamp="1593699464898">
       <screen x="0" y="27" width="1920" height="1173" />
     </state>
-    <state x="624" y="283" key="run.anything.popup/0.27.1920.1173@0.27.1920.1173" timestamp="1589289694768" />
-    <state x="623" y="287" width="672" height="678" key="search.everywhere.popup" timestamp="1593083843299">
+    <state x="624" y="283" key="run.anything.popup/0.27.1920.1173@0.27.1920.1173" timestamp="1593699464898" />
+    <state x="623" y="287" width="672" height="678" key="search.everywhere.popup" timestamp="1593699493374">
       <screen x="0" y="27" width="1920" height="1173" />
     </state>
-    <state x="623" y="287" width="672" height="678" key="search.everywhere.popup/0.27.1920.1173@0.27.1920.1173" timestamp="1593083843299" />
+    <state x="623" y="287" width="672" height="678" key="search.everywhere.popup/0.27.1920.1173@0.27.1920.1173" timestamp="1593699493374" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

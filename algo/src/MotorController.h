@@ -9,12 +9,19 @@
 
 class MotorController {
 public:
-    float MotorR = 0;
-    float MotorL = 0;
+    int MotorR = 0;
+    int MotorL = 0;
+    float EncoderR = 0.f;
+    float EncoderL = 0.f;
+    float ForceL = 0.f;
+    float ForceR = 0.f;
     ros::Publisher pubR;
     ros::Publisher pubL;
     ros::Subscriber SubAr;
-
+    ros::Subscriber SubLrate;
+    ros::Subscriber SubRrate;
+    ros::Subscriber SubDLrate;
+    ros::Subscriber SubDRrate;
 
     explicit MotorController(ros::NodeHandle *n);
     void Stop();
@@ -24,6 +31,11 @@ public:
     void SetForceR(float EnR);
     void SetForceL(float EnL);
     void SubscribeArray(const std_msgs::Float64MultiArray::ConstPtr& msg);
+    void lrate(const std_msgs::Float32::ConstPtr& msg);
+    void rrate(const std_msgs::Float32::ConstPtr& msg);
+    void Dlrate(const std_msgs::Int32::ConstPtr& msg);
+    void Drrate(const std_msgs::Int32::ConstPtr& msg);
+
 
 
 

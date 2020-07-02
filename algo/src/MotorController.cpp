@@ -11,6 +11,10 @@ MotorController::MotorController(ros::NodeHandle *n)
     pubR = n->advertise<std_msgs::Float64>("EngineR", 100);
     pubL = n->advertise<std_msgs::Float64>("EngineL", 100);
     SubAr = n->subscribe("MotorForce", 100, &MotorController::SubscribeArray, this);
+    SubLrate = n->subscribe("lwheel_rate", 100, &MotorController::lrate, this);
+    SubRrate = n->subscribe("rwheel_rate", 100, &MotorController::rrate, this);
+    SubDLrate = n->subscribe("lwheel_desired_rate", 100, &MotorController::Dlrate, this);
+    SubDRrate = n->subscribe("rwheel_desired_rate", 100, &MotorController::Drrate, this);
     msg.data = 0.0;
     pubR.publish(msg);
     pubL.publish(msg);
@@ -151,4 +155,24 @@ void MotorController::SetForceL(float EnL)
 void MotorController::SubscribeArray(const std_msgs::Float64MultiArray::ConstPtr& msg)
 {
     SetForce(msg->data[0], msg->data[1]);
+}
+
+void MotorController::lrate(const std_msgs::Float32::ConstPtr& msg)
+{
+    EncoderL = msg->data;
+}
+
+void MotorController::rrate(const std_msgs::Float32::ConstPtr& msg)
+{
+    EncoderR = msg->data;
+}
+
+void MotorController::Dlrate(const std_msgs::Int32::ConstPtr &msg)
+{
+    MotorL = msg->data;
+}
+
+void MotorController::Drrate(const std_msgs::Int32::ConstPtr &msg)
+{
+    MotorR = msg->data;
 }
