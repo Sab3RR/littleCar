@@ -18,6 +18,7 @@
 //#include <tf2_ros/transform_broadcaster.h>
 #include <geometry_msgs/Pose.h>
 #include <geometry_msgs/PoseArray.h>
+#include <geometry_msgs/Twist.h>
 #include <sensor_msgs/MagneticField.h>
 #include <sensor_msgs/LaserScan.h>
 #include <geometry_msgs/TransformStamped.h>
@@ -30,7 +31,10 @@
 #include <boost/numeric/ublas/matrix.hpp>
 #include <boost/numeric/ublas/io.hpp>
 #include <vector>
+#include <list>
 #include <termios.h>
+#include <tf/tf.h>
+#include <nav_msgs/Odometry.h>
 #define LENGTH norm_2
 using namespace boost::numeric::ublas;
 struct vec
@@ -67,4 +71,5 @@ public:
     vector<double> rightdown =  vector<double>(2);
     std::vector<Sector *> transit;
 };
+;
 #endif //SRC_ROSDEF_H

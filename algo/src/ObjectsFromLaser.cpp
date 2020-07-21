@@ -9,7 +9,7 @@
 ObjectsFromLaser::ObjectsFromLaser(ros::NodeHandle *n)
 {
     subL = n->subscribe("scan", 1, &ObjectsFromLaser::AddObjects, this);
-    vis_pub = n->advertise<visualization_msgs::MarkerArray>( "visualization_marker", 0 );
+    vis_pub = n->advertise<visualization_msgs::MarkerArray>( "visualization_marker_array", 0 );
 }
 
 bool ObjectsFromLaser::hit(geometry_msgs::Pose &point, geometry_msgs::Pose points) {
@@ -201,7 +201,7 @@ void    ObjectsFromLaser::AddObjects(const sensor_msgs::LaserScan::ConstPtr &msg
         if (msg->ranges[i] == INFINITY)
             continue;
         add = true;
-        angle = msg->angle_min + dir + (float)i * msg->angle_increment;
+        angle = msg->angle_min + dir  + (float)i * msg->angle_increment;
         point.position.x = cos(angle) * msg->ranges[i] + pos.x;
         point.position.y = sin(angle) * msg->ranges[i] + pos.y;
         point.position.z = 0.25;

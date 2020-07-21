@@ -1,4 +1,4 @@
-/snap/clion/112/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/sab3r/new_ws/src/algo
+/snap/clion/114/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/sab3r/new_ws/src/algo
 -- Using CATKIN_DEVEL_PREFIX: /home/sab3r/new_ws/src/algo/cmake-build-debug/devel
 -- Using CMAKE_PREFIX_PATH: /home/sab3r/new_ws/devel;/opt/ros/melodic
 -- This workspace overlays: /home/sab3r/new_ws/devel;/opt/ros/melodic
@@ -13,7 +13,7 @@
 -- Found gmock sources under '/usr/src/googletest': gmock will be built
 -- Found PythonInterp: /usr/bin/python2 (found version "2.7.17") 
 -- Using Python nosetests: /usr/bin/nosetests-2.7
--- catkin 0.7.23
+-- catkin 0.7.26
 -- BUILD_SHARED_LIBS is on
 -- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
 -- algo: 3 messages, 0 services
