@@ -59,6 +59,7 @@ find_package(catkin REQUIRED COMPONENTS
    Encoder_msg.msg
          vector_msg.msg
          vector_array.msg
+         point_msg.msg
  )
 
 ## Generate services in the 'srv' folder
@@ -234,5 +235,7 @@ add_executable(mancontroll src/ManControll.cpp src/ManControll.h)
 target_link_libraries(mancontroll ${catkin_LIBRARIES})
 add_executable(ObjectsV2 src/ObjectsFromLaserV2.cpp src/ObjectsFromLaserV2.h)
 target_link_libraries(ObjectsV2 ${catkin_LIBRARIES})
+add_executable(Walls src/WallFromObjects.cpp src/WallFromObjects.h)
+target_link_libraries(Walls ${catkin_LIBRARIES})
 #add_executable(Objects src/ObjectsFromLaser.cpp src/ObjectsFromLaser.h)
 #target_link_libraries(Objects ${catkin_LIBRARIES})

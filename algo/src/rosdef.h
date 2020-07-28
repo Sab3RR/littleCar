@@ -27,6 +27,7 @@
 #include "algo/Encoder_msg.h"
 #include "algo/vector_msg.h"
 #include "algo/vector_array.h"
+#include <algo/point_msg.h>
 #include <boost/numeric/ublas/vector.hpp>
 #include <boost/numeric/ublas/matrix.hpp>
 #include <boost/numeric/ublas/io.hpp>
@@ -43,24 +44,7 @@ struct vec
     float y;
 };
 
-class Wall
-{
-public:
-    vector<double> *start;
-    vector<double> *end;
-    vector<double> *dir;
-    vector<double> *v;
 
-
-    Wall()
-    {
-        start = new vector<double>(2);
-        end = new vector<double>(2);
-        dir = new vector<double>(2);
-        v = new vector<double>(2);
-    }
-
-};
 
 class Sector
 {

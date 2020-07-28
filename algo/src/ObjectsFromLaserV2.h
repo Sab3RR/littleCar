@@ -22,6 +22,7 @@ public:
     ros::Subscriber subOd;
     ros::Subscriber subLas;
     ros::Publisher  vis_pub;
+    ros::Publisher  points_pub;
     tf2::Vector3    pos = tf2::Vector3(0, 0, 0);
     tf2::Vector3    dir = tf2::Vector3(1, 0, 0);
 

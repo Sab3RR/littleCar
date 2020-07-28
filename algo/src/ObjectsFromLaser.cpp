@@ -190,6 +190,7 @@ void    ObjectsFromLaser::AddObjects(const sensor_msgs::LaserScan::ConstPtr &msg
     geometry_msgs::Pose currentPoint;
     std::list<geometry_msgs::Pose>::iterator p;
     visualization_msgs::MarkerArray markerArray;
+    algo::point_msg pMsg;
     float angle;
     float dist;
     float range;
@@ -276,6 +277,7 @@ void    ObjectsFromLaser::AddObjects(const sensor_msgs::LaserScan::ConstPtr &msg
         i++;
     }
     vis_pub.publish( markerArray );
+
 }
 
 int     main(int ac, char** av)

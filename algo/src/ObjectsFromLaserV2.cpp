@@ -9,6 +9,7 @@ ObjectsFromLaserV2::ObjectsFromLaserV2(ros::NodeHandle *n)
     subOd = n->subscribe("odom", 10, &ObjectsFromLaserV2::odomSub, this);
     subLas = n->subscribe("scan", 10, &ObjectsFromLaserV2::AddObjects, this);
     vis_pub = n->advertise<visualization_msgs::MarkerArray>( "visualization_marker_array", 0 );
+    points_pub = n->advertise<algo::point_msg>( "nav_points", 0 );
 }
 
 void ObjectsFromLaserV2::odomSub(const nav_msgs::Odometry::ConstPtr &msg)
@@ -28,6 +29,7 @@ void ObjectsFromLaserV2::AddObjects(const sensor_msgs::LaserScan::ConstPtr &msg)
     tf2::Vector3 dirToPoint;
     tf2::Vector3 pointPos;
     tf2::Vector3 rotVector(0, 0, 1);
+    algo::point_msg pMsg;
     float angle;
     visualization_msgs::MarkerArray markerArray;
     int i = 0;
@@ -48,6 +50,9 @@ void ObjectsFromLaserV2::AddObjects(const sensor_msgs::LaserScan::ConstPtr &msg)
     i = 0;
     for (auto & j : arr)
     {
+        geometry_msgs::Vector3 pPos;
+        std_msgs::Float32 pR;
+
         visualization_msgs::Marker marker;
         marker.header.frame_id = "laser";
         marker.header.stamp = ros::Time();
@@ -55,14 +60,14 @@ void ObjectsFromLaserV2::AddObjects(const sensor_msgs::LaserScan::ConstPtr &msg)
         marker.id = i;
         marker.type = visualization_msgs::Marker::CYLINDER;
         marker.action = visualization_msgs::Marker::ADD;
-        marker.pose.position.x = j.pos.x();
-        marker.pose.position.y = j.pos.y();
-        marker.pose.position.z = 0;
+        pPos.x = marker.pose.position.x = j.pos.x();
+        pPos.y = marker.pose.position.y = j.pos.y();
+        pPos.z = marker.pose.position.z = 0;
         marker.pose.orientation.x = 0.0;
         marker.pose.orientation.y = 0.0;
         marker.pose.orientation.z = 0.0;
         marker.pose.orientation.w = 1.0;
-        marker.scale.x = j.r;
+        pR.data = marker.scale.x = j.r;
         marker.scale.y = j.r;
         marker.scale.z = 0.01;
         marker.color.a = 0.5; // Don't forget to set the alpha!
@@ -71,9 +76,13 @@ void ObjectsFromLaserV2::AddObjects(const sensor_msgs::LaserScan::ConstPtr &msg)
         marker.color.b = 0.0;
         marker.lifetime.fromSec(0.25);
         markerArray.markers.push_back(marker);
+        pMsg.pos.push_back(pPos);
+        pMsg.r.push_back(pR);
         i++;
     }
+    points_pub.publish(pMsg);
     vis_pub.publish(markerArray);
+
 }
 
 void ObjectsFromLaserV2::tryAdd(tf2::Vector3 &dirToPoint, tf2::Vector3 &pointPos)
