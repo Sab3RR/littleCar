@@ -6,7 +6,7 @@
 
 WallFromObjects::WallFromObjects(ros::NodeHandle *n)
 {
-    sub_points = n->subscribe("nav_points", 0, &WallFromObjects::makeWalls, this);
+    sub_points = n->subscribe("nav_points", 1, &WallFromObjects::makeWalls, this);
     vis_pub = n->advertise<visualization_msgs::MarkerArray>( "visualization_marker_array", 0 );
 }
 
@@ -16,8 +16,16 @@ void WallFromObjects::makeWalls(const algo::point_msg::ConstPtr &msg)
     auto point_r = msg->r.begin();
     ObjectsFromLaserV2::Point point;
     visualization_msgs::MarkerArray markerArray;
+    double res;
+    double secs = ros::Time::now().toSec();
+
 
     points_arr.erase(points_arr.begin(), points_arr.end());
+    walls.erase(walls.begin(), walls.end());
+    res = ros::Time::now().toSec() - secs;
+    ROS_INFO("erased - %f", res);
+    ROS_INFO("points_arr - %d", points_arr.size());
+    secs = ros::Time::now().toSec();
     while (point_pos != msg->pos.end() && point_r != msg->r.end())
     {
         point.pos.setX(point_pos->x);
@@ -28,10 +36,21 @@ void WallFromObjects::makeWalls(const algo::point_msg::ConstPtr &msg)
         point_pos++;
         point_r++;
     }
+    res = ros::Time::now().toSec() - secs;
+    ROS_INFO("added - %f", res);
+    secs = ros::Time::now().toSec();
     for (auto points : points_arr)
     {
+        double res2;
+        double secs2 = ros::Time::now().toSec();
+
         createWall(points);
+        res2 = ros::Time::now().toSec() - secs2;
+        ROS_INFO("creating - %f", res2);
     }
+    res = ros::Time::now().toSec() - secs;
+    ROS_INFO("created - %f", res);
+    secs = ros::Time::now().toSec();
     int i = 0;
     for (auto & j : walls)
     {
@@ -39,7 +58,7 @@ void WallFromObjects::makeWalls(const algo::point_msg::ConstPtr &msg)
         geometry_msgs::Point p;
         marker.header.frame_id = "laser";
         marker.header.stamp = ros::Time();
-        marker.ns = "my_namespace";
+        marker.ns = "new_namespace";
         marker.id = i;
         marker.type = visualization_msgs::Marker::LINE_LIST;
         marker.action = visualization_msgs::Marker::ADD;
@@ -52,9 +71,9 @@ void WallFromObjects::makeWalls(const algo::point_msg::ConstPtr &msg)
         marker.pose.orientation.w = 1.0;
         marker.scale.x = 0.05;
         marker.color.a = 0.5; // Don't forget to set the alpha!
-        marker.color.r = 0.0;
-        marker.color.g = 0.0;
-        marker.color.b = 1.0;
+        marker.color.r = (rand() % 50 + 50) / 100.f;
+        marker.color.g = (rand() % 50 + 50) / 100.f;
+        marker.color.b = (rand() % 50 + 50) / 100.f;
         p.x = j.start.x();
         p.y = j.start.y();
         p.z = 0;
@@ -62,11 +81,13 @@ void WallFromObjects::makeWalls(const algo::point_msg::ConstPtr &msg)
         p.x = j.end.x();
         p.y = j.end.y();
         marker.points.push_back(p);
-        marker.lifetime.fromSec(10);
+        marker.lifetime.fromSec(0.25);
         markerArray.markers.push_back(marker);
         i++;
     }
     vis_pub.publish(markerArray);
+    res = ros::Time::now().toSec() - secs;
+    ROS_INFO("sended - %f", res);
 }
 
 void WallFromObjects::createWall(ObjectsFromLaserV2::Point point)
@@ -75,31 +96,41 @@ void WallFromObjects::createWall(ObjectsFromLaserV2::Point point)
     {
         if (point.pos.distance(points.pos) == 0)
             continue;
-        if (point.pos.distance(points.pos) < DEFAULTRADIUS * 3)
+        if (point.pos.distance(points.pos) < CAPTUREDRADIUS)
         {
             tryToCreate(point, points);
         }
-        else
+        /*else
         {
             for (int i = 0; i < walls.size(); i++)
             {
 
                 tryToAdd(walls[i], i, points);
             }
-        }
+        }*/
     }
 }
 
 void WallFromObjects::tryToCreate(ObjectsFromLaserV2::Point point, ObjectsFromLaserV2::Point points)
 {
     Wall new_wall;
+    bool add = false;
 
     new_wall.start = point.pos;
     new_wall.end = points.pos;
     new_wall.v = new_wall.end - new_wall.start;
 
     if (!wallIntersect(new_wall))
-        walls.push_back(new_wall);
+    {
+        for (auto points : points_arr)
+        {
+            if (tryToAdd(new_wall, points))
+                add = true;
+        }
+        if (add && new_wall.v.length() > DEFAULTRADIUS)
+            walls.push_back(new_wall);
+    }
+
 }
 
 bool WallFromObjects::wallIntersect(Wall wall)
@@ -161,7 +192,7 @@ void WallFromObjects::tryToAdd(Wall &wall, int i, ObjectsFromLaserV2::Point poin
     new_wall = wall;
     addble = point.pos - new_wall.end;
     angle = new_wall.v.angle(addble);
-    if (angle < 0.0872665 && addble.length() < W)
+    if (angle < 0.0872665 && addble.length() < W && addble.length() != 0)
     {
         new_wall.end = point.pos;
         new_wall.v = new_wall.end - new_wall.start;
@@ -174,7 +205,7 @@ void WallFromObjects::tryToAdd(Wall &wall, int i, ObjectsFromLaserV2::Point poin
     new_wall = wall;
     addble = point.pos - new_wall.start;
     angle = new_wall.v.angle(addble);
-    if (angle > 3.05433 && addble.length() < W)
+    if (angle > 3.05433 && addble.length() < W && addble.length() != 0)
     {
         new_wall.start = point.pos;
         new_wall.v = new_wall.end - new_wall.start;
@@ -184,6 +215,41 @@ void WallFromObjects::tryToAdd(Wall &wall, int i, ObjectsFromLaserV2::Point poin
             return;
         }
     }
+}
+
+bool WallFromObjects::tryToAdd(Wall &wall, ObjectsFromLaserV2::Point point)
+{
+    tf2::Vector3 addble;
+    Wall new_wall;
+    float angle;
+
+    new_wall = wall;
+    addble = point.pos - new_wall.end;
+    angle = new_wall.v.angle(addble);
+    if (angle < 0.0174533 && addble.length() < W && addble.length() != 0)
+    {
+        new_wall.end = point.pos;
+        new_wall.v = new_wall.end - new_wall.start;
+        if (!wallIntersect(new_wall))
+        {
+            wall = new_wall;
+            return true;
+        }
+    }
+    new_wall = wall;
+    addble = point.pos - new_wall.start;
+    angle = new_wall.v.angle(addble);
+    if (angle > 3.29867 && addble.length() < W && addble.length() != 0)
+    {
+        new_wall.start = point.pos;
+        new_wall.v = new_wall.end - new_wall.start;
+        if (!wallIntersect(new_wall))
+        {
+            wall = new_wall;
+            return true;
+        }
+    }
+    return false;
 }
 
 int main(int ac, char **av)

@@ -8,6 +8,7 @@
 #include "rosdef.h"
 #include "ObjectsFromLaserV2.h"
 #include "Position.h"
+#define CAPTUREDRADIUS DEFAULTRADIUS * 3
 
 class WallFromObjects {
 public:
@@ -28,6 +29,7 @@ public:
     void createWall(ObjectsFromLaserV2::Point point);
     void tryToCreate(ObjectsFromLaserV2::Point point, ObjectsFromLaserV2::Point points);
     void tryToAdd(Wall &wall, int i, ObjectsFromLaserV2::Point point);
+    bool tryToAdd(Wall &wall, ObjectsFromLaserV2::Point point);
     bool wallIntersect(Wall wall);
     bool wallIntersect(Wall wall, int i);
     bool intersect(Wall wall1, Wall wall2);

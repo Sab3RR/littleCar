@@ -9,7 +9,7 @@ ObjectsFromLaserV2::ObjectsFromLaserV2(ros::NodeHandle *n)
     subOd = n->subscribe("odom", 10, &ObjectsFromLaserV2::odomSub, this);
     subLas = n->subscribe("scan", 10, &ObjectsFromLaserV2::AddObjects, this);
     vis_pub = n->advertise<visualization_msgs::MarkerArray>( "visualization_marker_array", 0 );
-    points_pub = n->advertise<algo::point_msg>( "nav_points", 0 );
+    points_pub = n->advertise<algo::point_msg>( "nav_points", 1 );
 }
 
 void ObjectsFromLaserV2::odomSub(const nav_msgs::Odometry::ConstPtr &msg)
