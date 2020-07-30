@@ -19,6 +19,7 @@
 #include <geometry_msgs/Pose.h>
 #include <geometry_msgs/PoseArray.h>
 #include <geometry_msgs/Twist.h>
+#include <geometry_msgs/Point.h>
 #include <sensor_msgs/MagneticField.h>
 #include <sensor_msgs/LaserScan.h>
 #include <geometry_msgs/TransformStamped.h>

@@ -16,7 +16,7 @@ public:
     {
     public:
         tf2::Vector3 pos;
-        std::vector<Wall>::iterator wall;
+        //std::vector<Wall>::iterator wall;
         float r = DEFAULTRADIUS;
     };
     ros::Subscriber subOd;

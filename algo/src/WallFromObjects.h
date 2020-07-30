@@ -7,6 +7,7 @@
 
 #include "rosdef.h"
 #include "ObjectsFromLaserV2.h"
+#include "Position.h"
 
 class WallFromObjects {
 public:
@@ -18,14 +19,19 @@ public:
         tf2::Vector3 v;
     };
     ros::Subscriber sub_points;
+    ros::Publisher vis_pub;
     std::vector<Wall> walls;
     std::vector<ObjectsFromLaserV2::Point> points_arr;
 
     explicit WallFromObjects(ros::NodeHandle *n);
     void makeWalls(const algo::point_msg::ConstPtr &msg);
-    void createWall(algo::point_msg::_pos_type::iterator pos, algo::point_msg::_r_type::iterator r, const algo::point_msg::ConstPtr &msg);
-
-
+    void createWall(ObjectsFromLaserV2::Point point);
+    void tryToCreate(ObjectsFromLaserV2::Point point, ObjectsFromLaserV2::Point points);
+    void tryToAdd(Wall &wall, int i, ObjectsFromLaserV2::Point point);
+    bool wallIntersect(Wall wall);
+    bool wallIntersect(Wall wall, int i);
+    bool intersect(Wall wall1, Wall wall2);
+    int  sign(tf2Scalar scalar);
 };
 
 
